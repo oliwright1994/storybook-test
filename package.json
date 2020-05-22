@@ -1,6 +1,13 @@
 {
-  "name": "bright",
-  "version": "1.0.0",
+  "name": "@smartpension/bright",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:smartpension/bright.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "main": "build/index.js",
   "module": "build/index.es.js",
   "files": [
