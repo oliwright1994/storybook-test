@@ -1,3 +1,5 @@
 The future's Bright 💡
 
-`npm install @smartpension/bright`
+```
+npm install @smartpension/bright
+```
