@@ -19,11 +19,13 @@
     "@rollup/plugin-commonjs": "^11.1.0",
     "@rollup/plugin-node-resolve": "^7.1.3",
     "@storybook/addon-actions": "^5.3.18",
-    "@storybook/addon-info": "^5.3.18",
+    "@storybook/addon-info": "^5.3.19",
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addons": "^5.3.18",
-    "@storybook/react": "^5.3.18",
+    "@storybook/react": "^5.3.19",
+    "@types/jest": "^25.2.3",
     "@types/react": "^16.9.34",
+    "@types/styled-components": "^5.1.0",
     "babel-loader": "^8.1.0",
     "react": "^16.13.1",
     "react-docgen-typescript-loader": "^3.7.2",
@@ -31,8 +33,14 @@
     "rollup": "^2.8.0",
     "rollup-plugin-peer-deps-external": "^2.2.2",
     "rollup-plugin-typescript2": "^0.27.0",
+    "styled-components": "^5.1.1",
+    "styled-system": "^5.1.5",
+    "storybook-addon-react-live-edit": "^2.0.4",
+    "storybook-addon-styled-component-theme": "^1.3.0",
     "ts-loader": "^7.0.2",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "@types/storybook__addon-info": "^5.2.1",
+    "@types/styled-system": "^5.1.9"
   },
   "peerDependencies": {
     "react": ">=16.13.1",
@@ -44,5 +52,10 @@
     "build-storybook": "build-storybook",
     "prepublishOnly": "yarn build"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "emotion-theming": "^10.0.27"
+  }
 }
