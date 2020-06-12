@@ -2,7 +2,7 @@ import React from 'react';
 import createStory from '../../utils/createStory';
 import Table from '.';
 import Tag from '../Tag';
-import Button from '../Button';
+import { Button } from '@chakra-ui/core';
 
 createStory('COMPONENTS | Table', [
   {
