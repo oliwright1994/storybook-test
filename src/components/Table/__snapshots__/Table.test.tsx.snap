@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Table /> should render as expected 1`] = `
+<DocumentFragment>
+  <table
+    class="sc-AxjAm ykYLV"
+  >
+    <thead>
+      <tr
+        class="sc-AxhCb gtcCAP"
+        height="32"
+      >
+        <th
+          class="sc-AxirZ fXGLll"
+        >
+          Static Column
+        </th>
+        <th
+          class="sc-AxirZ fXGLll"
+        >
+          Dynamic Render Column
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="sc-AxhCb gHPYCa"
+        height="48"
+      >
+        <td
+          class="sc-AxiKw MbEDr"
+        >
+          lorem
+        </td>
+        <td
+          class="sc-AxiKw MbEDr"
+        >
+          <b>
+            lipsum
+          </b>
+        </td>
+      </tr>
+      <tr
+        class="sc-AxhCb gHPYCa"
+        height="48"
+      >
+        <td
+          class="sc-AxiKw MbEDr"
+        >
+          dolor
+        </td>
+        <td
+          class="sc-AxiKw MbEDr"
+        >
+          <b>
+            sit
+          </b>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
