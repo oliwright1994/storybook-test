@@ -1,39 +1,47 @@
 import styled from 'styled-components';
 import {
-  typography,
-  space,
-  color,
-  size,
   border,
-  SizeProps,
   BorderProps,
   PaddingProps,
   padding,
   layout,
   LayoutProps,
-  margin,
-  MarginProps,
+  position,
+  PositionProps,
+  fontWeight,
+  FontWeightProps,
 } from 'styled-system';
 
-export const STable = styled.table`
-  ${color}
-  table-layout: fixed;
-  border-collapse: collapse;
-  /* width: 100%; */
-`;
-
-
-export const STh = styled.th`
-  text-align: left;
-`
-
-export const STd = styled.td<PaddingProps>`
-  ${padding}
-`;
-
-export const STr = styled.tr<LayoutProps & BorderProps & PaddingProps>`
+export const TableWrap = styled.div<LayoutProps & BorderProps>`
   ${layout}
   ${border}
+`;
+
+export const TableHead = styled.div``;
+export const TableBody = styled.div``;
+
+export const TableRow = styled.div<BorderProps & PaddingProps & FontWeightProps & LayoutProps>`
+  ${border}
   ${padding}
+  ${fontWeight}
+  ${layout}
+`;
+
+export const TableCell = styled.div<LayoutProps & PositionProps>`
+  white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: hidden;
+  ${layout}
+  ${position}
+`;
+
+export const Resizer = styled.div`
+  display: inline-block;
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(50%);
+  z-index: 1;
 `;

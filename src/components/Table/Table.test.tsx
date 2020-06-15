@@ -1,20 +1,19 @@
-import React from 'react'
+import React from 'react';
 import { render } from '@testing-library/react';
-import Table from '.'
+import { CellProps } from 'react-table';
+import Table from '.';
 
 const props = {
   columns: [
     {
-      title: 'Static Column',
-      dataIndex: 'col1',
-      key: 'col1'
+      Header: 'Static Column',
+      accessor: 'col1',
     },
     {
-      title: 'Dynamic Render Column',
-      dataIndex: 'col2',
-      key: 'col2',
-      render: ({ col2 }) => <b>{col2}</b>
-    }
+      Header: 'Dynamic Render Column',
+      accessor: 'col2',
+      Cell: ({ row }: CellProps<object>) => <b>{row.values.col2}</b>,
+    },
   ],
   data: [
     {
@@ -23,14 +22,14 @@ const props = {
     },
     {
       col1: 'dolor',
-      col2: 'sit'
-    }
-  ]
-}
+      col2: 'sit',
+    },
+  ],
+};
 
 describe('<Table />', () => {
   it('should render as expected', () => {
-    const { asFragment } = render(<Table {...props} />)
-    expect(asFragment()).toMatchSnapshot()
-  })
-})
+    const { asFragment } = render(<Table {...props} />);
+    expect(asFragment()).toMatchSnapshot();
+  });
+});

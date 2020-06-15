@@ -1,16 +1,8 @@
-import { ReactElement } from 'react';
+import { Column } from 'react-table';
 
-type TColumnRenderer = (props: { [key: string]: any }) => ReactElement;
-
-interface IColumn {
-  title: string;
-  dataIndex: string | string[];
-  key: string;
-  render?: TColumnRenderer;
-}
+export type TData = object;
 
 export interface ITable {
-  columns: IColumn[];
-  data: { [key: string]: any }[];
-  loading?: boolean;
+  columns: Column<Data>[];
+  data: Data[];
 }

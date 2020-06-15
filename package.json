@@ -34,6 +34,7 @@
     "@types/jest": "^25.2.3",
     "@types/lodash.merge": "^4.6.6",
     "@types/react": "^16.9.34",
+    "@types/react-table": "^7.0.19",
     "@types/storybook__addon-info": "^5.2.1",
     "@types/styled-components": "^5.1.0",
     "@types/styled-system": "^5.1.9",
@@ -69,6 +70,7 @@
     "@chakra-ui/core": "^0.8.0",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
-    "emotion-theming": "^10.0.27"
+    "emotion-theming": "^10.0.27",
+    "react-table": "^7.2.0"
   }
 }
