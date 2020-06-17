@@ -1,5 +1,6 @@
-import React from 'react';
 import { select } from '@storybook/addon-knobs';
+import React from 'react';
+
 import createStory from '../../utils/createStory';
 import Tag from '.';
 import { TMessage } from './Tag.d';
@@ -22,5 +23,5 @@ createStory(
       },
     },
   ],
-  { liveEdit: { Component: Tag, render: `return <Tag messageType="info">hi</Tag>` } }
+  { liveEdit: { Component: Tag, render: 'return <Tag messageType="info">hi</Tag>' } }
 );

@@ -15,8 +15,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react",
-    "typeRoots": ["./declarations"]
+    "typeRoots": ["./declarations"],
+    "types": ["jest", "node"]
   },
-  "include": ["src", "declarations"],
-  "exclude": ["node_modules", "dist", "src/**/*.stories.tsx", "src/**/*.test.tsx"]
+  "include": ["src", "declarations", "testing"],
+  "exclude": ["node_modules", "dist"]
 }

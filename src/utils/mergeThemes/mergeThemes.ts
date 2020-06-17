@@ -2,7 +2,10 @@ import { DefaultTheme as DefaultChakraTheme, theme as defaultChakraTheme } from 
 import merge from 'lodash.merge';
 import { Theme } from 'styled-system';
 
-export default function mergeThemes(themes: Theme[], chakraTheme: DefaultChakraTheme = defaultChakraTheme) {
+export default function mergeThemes(
+  themes: Theme[],
+  chakraTheme: DefaultChakraTheme = defaultChakraTheme
+): DefaultChakraTheme {
   return {
     ...merge(themes),
     opacity: chakraTheme.opacity,

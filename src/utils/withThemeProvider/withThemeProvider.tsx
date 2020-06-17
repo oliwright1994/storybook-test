@@ -18,12 +18,11 @@ const mergedChakraTheme = {
 
 const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
   body {
-    // @ts-ignore
-    font-family: ${(p) => p.theme.fonts.body}
+    font-family: sans-serif
   }
 `;
 
-export default (): StoryDecorator => (story: Function): JSX.Element => (
+export default (): StoryDecorator => (story: () => React.ReactNode): JSX.Element => (
   <ThemeProvider theme={defaultTheme}>
     <ChakraThemeProvider theme={(mergedChakraTheme as unknown) as ChakraTheme}>
       <GlobalStyle />

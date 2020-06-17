@@ -177,6 +177,7 @@ export default {
   blackAlpha,
   gray,
   red,
+  cyan,
   orange,
   yellow,
   green,

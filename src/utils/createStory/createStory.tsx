@@ -9,9 +9,7 @@ import { Story, StoryOptions } from './createStory.d';
 export default function createStory(
   name: string,
   stories: Story[],
-  {
-    tests = [], readme = '', liveEdit = null, changes = '',
-  }: StoryOptions = {},
+  { tests = [], readme = '', liveEdit = null, changes = '' }: StoryOptions = {}
 ): void {
   const _stories = storiesOf(name, module)
     // @ts-ignore

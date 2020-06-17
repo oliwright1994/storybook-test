@@ -1,4 +1,5 @@
 const path = require('path');
+
 const testingRoot = path.resolve(__dirname);
 
 module.exports = {
@@ -7,11 +8,7 @@ module.exports = {
   bail: false,
   verbose: true, // use --silent to hide log
   collectCoverage: false, // run with --coverage if need coverage
-  collectCoverageFrom: [
-    'src/**/*.(ts|tsx)',
-    '!src/**/*.(styled|stories|test).(ts|tsx)',
-    '!src/theme/**',
-  ],
+  collectCoverageFrom: ['src/**/*.(ts|tsx)', '!src/**/*.(styled|stories|test).(ts|tsx)', '!src/theme/**'],
   coverageThreshold: {
     global: {
       branches: 80,

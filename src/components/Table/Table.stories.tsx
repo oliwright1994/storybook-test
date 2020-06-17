@@ -1,7 +1,8 @@
+import { Button } from '@chakra-ui/core';
 import React from 'react';
 import { CellProps } from 'react-table';
+
 import createStory from '../../utils/createStory';
-import { Button } from '@chakra-ui/core';
 import Tag from '../Tag';
 import Table from '.';
 
@@ -60,7 +61,12 @@ createStory(
               tags: [],
               subject: "Your income is due to run out when you're 76. Here is what to do if you want your blah ",
             },
-            { date: '17:20', sender: 'Smart', tags: [], subject: 'Mauris henderit suspicit ante' },
+            {
+              date: '17:20',
+              sender: 'Smart',
+              tags: [],
+              subject: 'Mauris henderit suspicit ante',
+            },
             {
               date: '18:20',
               sender: 'Smart',

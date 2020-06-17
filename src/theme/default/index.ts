@@ -2,9 +2,7 @@ import { Theme } from 'styled-system';
 
 import { borders, radii, shadows } from './border';
 import colors from './colors';
-import {
-  fonts, fontSizes, fontWeights, letterSpacings, lineHeights,
-} from './font';
+import { fonts, fontSizes, fontWeights, letterSpacings, lineHeights } from './font';
 import { breakpoints, space, zIndices } from './position';
 
 const defaultTheme: Theme = {

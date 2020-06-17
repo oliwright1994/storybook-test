@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import { ITag } from './Tag.d';
 import { STag } from './Tag.styled';
 
-const Tag: FC<ITag> = ({ children, messageType, ...properties }) => (
+const Tag: FC<ITag> = ({ children, messageType, ...props }) => (
   <STag
     color={`${messageType}.2`}
     border="2px"
@@ -14,7 +14,7 @@ const Tag: FC<ITag> = ({ children, messageType, ...properties }) => (
     py={1}
     fontSize="xs"
     fontWeight={4}
-    {...properties}
+    {...props}
   >
     {children}
   </STag>
