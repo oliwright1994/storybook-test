@@ -1,1 +1,1 @@
-export { default } from './createStory'
+export { default } from './createStory';

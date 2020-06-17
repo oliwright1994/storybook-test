@@ -2,14 +2,14 @@ import styled from 'styled-components';
 import {
   border,
   BorderProps,
-  PaddingProps,
-  padding,
-  layout,
-  LayoutProps,
-  position,
-  PositionProps,
   fontWeight,
   FontWeightProps,
+  layout,
+  LayoutProps,
+  padding,
+  PaddingProps,
+  position,
+  PositionProps,
 } from 'styled-system';
 
 export const TableWrap = styled.div<LayoutProps & BorderProps>`

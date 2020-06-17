@@ -1,7 +1,9 @@
 import styled from 'styled-components';
-import { typography, space, color, ColorProps, border, BorderProps, padding, PaddingProps, fontSize, FontSizeProps, fontWeight, FontWeightProps } from 'styled-system';
+import {
+  border, BorderProps, color, ColorProps, fontSize, FontSizeProps, fontWeight, FontWeightProps, padding, PaddingProps, space, typography,
+} from 'styled-system';
 
-type TSTag = ColorProps & BorderProps & PaddingProps & FontSizeProps & FontWeightProps
+type TSTag = ColorProps & BorderProps & PaddingProps & FontSizeProps & FontWeightProps;
 
 export const STag = styled.div<TSTag>`
   display: inline-block;

@@ -1,1 +1,1 @@
-export { default } from './BrightProvider'
+export { default } from './BrightProvider';

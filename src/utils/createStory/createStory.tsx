@@ -1,6 +1,6 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
+import { storiesOf } from '@storybook/react';
+import React from 'react';
 import { withLiveEditScope } from 'storybook-addon-react-live-edit';
 
 import withThemeProvider from '../withThemeProvider';
@@ -9,13 +9,13 @@ import { Story, StoryOptions } from './createStory.d';
 export default function createStory(
   name: string,
   stories: Story[],
-  { tests = [], readme = '', liveEdit = null, changes = '' }: StoryOptions = {}
+  {
+    tests = [], readme = '', liveEdit = null, changes = '',
+  }: StoryOptions = {},
 ): void {
   const _stories = storiesOf(name, module)
     // @ts-ignore
     .addDecorator(withThemeProvider());
-
- 
 
   if (liveEdit) {
     _stories

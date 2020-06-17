@@ -10,5 +10,3 @@ export interface Story {
   label: string;
   jsx: () => JSX.Element;
 }
-
-

@@ -1,1 +1,1 @@
-export { default } from './mergeThemes'
+export { default } from './mergeThemes';

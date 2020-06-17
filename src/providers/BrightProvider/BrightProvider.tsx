@@ -1,8 +1,9 @@
-import React, { FC } from 'react';
-import { Theme } from 'styled-system';
-import mergeThemes from '../../utils/mergeThemes';
-import { ThemeProvider } from 'styled-components';
 import { ThemeProvider as ChakraThemeProvider } from '@chakra-ui/core';
+import React, { FC } from 'react';
+import { ThemeProvider } from 'styled-components';
+import { Theme } from 'styled-system';
+
+import mergeThemes from '../../utils/mergeThemes';
 
 interface IBrightProvider {
   theme: Theme;
