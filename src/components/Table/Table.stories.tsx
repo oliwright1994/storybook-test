@@ -91,7 +91,7 @@ createStory(
             },
             {
               Header: '',
-              accessor: null,
+              accessor: 'actions',
               Cell: ({ row }: CellProps<object>) =>
                 row.values.actions.map((action: string) => <Button height="auto">{action}</Button>),
             },

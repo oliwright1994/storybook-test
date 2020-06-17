@@ -2,6 +2,7 @@ import React from 'react';
 import { select } from '@storybook/addon-knobs';
 import createStory from '../../utils/createStory';
 import Tag from '.';
+import { TMessage } from './Tag.d';
 
 const options = {
   success: 'success',
@@ -17,7 +18,7 @@ createStory(
       label: 'success',
       jsx: () => {
         const messageType = select('messageType', options, options.success, 'messageType');
-        return <Tag messageType={messageType}>{messageType}</Tag>;
+        return <Tag messageType={messageType as TMessage}>{messageType}</Tag>;
       },
     },
   ],

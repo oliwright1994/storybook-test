@@ -1,5 +1,7 @@
 import { MessageTypes } from '../../Bright.d';
 
+export type TMessage = 'success' | 'info' | 'warning' | 'danger'
+
 export interface ITag {
-  messageType: 'success' | 'info' | 'warning' | 'danger';
+  messageType: TMessage
 }
