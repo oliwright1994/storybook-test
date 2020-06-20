@@ -18,7 +18,7 @@ const mergedChakraTheme = {
 
 const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
   body {
-    font-family: sans-serif
+    font-family: 'Lato', sans-serif;
   }
 `;
 

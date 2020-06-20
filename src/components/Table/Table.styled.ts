@@ -2,37 +2,41 @@ import styled from 'styled-components';
 import {
   border,
   BorderProps,
+  fontSize,
+  FontSizeProps,
   fontWeight,
   FontWeightProps,
   layout,
   LayoutProps,
   padding,
   PaddingProps,
-  position,
-  PositionProps,
+  typography,
+  TypographyProps,
 } from 'styled-system';
 
-export const TableWrap = styled.div<LayoutProps & BorderProps>`
-  ${layout}
-  ${border}
+export const TableWrap = styled.table`
+  border-collapse: collapse;
 `;
 
-export const TableHead = styled.div``;
-export const TableBody = styled.div``;
-
-export const TableRow = styled.div<BorderProps & PaddingProps & FontWeightProps & LayoutProps>`
-  ${border}
+export const TableHead = styled.thead``;
+export const TableBody = styled.tbody``;
+export const TableHeadCell = styled.th<TypographyProps & PaddingProps & FontWeightProps & FontSizeProps>`
+  ${typography}
   ${padding}
   ${fontWeight}
+  ${fontSize}
+`;
+
+export const TableRow = styled.tr<BorderProps & PaddingProps & LayoutProps>`
+  ${border}
+  ${padding}
   ${layout}
 `;
 
-export const TableCell = styled.div<LayoutProps & PositionProps>`
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+export const TableCell = styled.td<LayoutProps & PaddingProps & FontSizeProps>`
   ${layout}
-  ${position}
+  ${padding}
+  ${fontSize}
 `;
 
 export const Resizer = styled.div`

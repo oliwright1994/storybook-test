@@ -53,7 +53,7 @@ createStory(
                 { type: 'info', label: 'Unread' },
                 { type: 'warning', label: 'Important' },
               ],
-              subject: "You\ve got 1 month's income left",
+              subject: "You\'ve got 1 month's income left",
             },
             {
               date: '16:20',

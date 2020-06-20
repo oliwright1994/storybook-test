@@ -2,99 +2,100 @@
 
 exports[`<Table /> should render as expected 1`] = `
 <DocumentFragment>
-  <div
-    class="sc-AxjAm jRogrB"
-    display="inline-block"
+  <table
+    class="sc-AxjAm lmudYF"
     role="table"
   >
-    <div
+    <thead
       class="sc-AxirZ ktnnZK"
     >
-      <div
-        class="sc-AxhCb ebjOuw"
-        font-weight="bold"
+      <tr
+        class="sc-AxhUy eHCoFN"
         role="row"
-        style="display: flex; width: 400px;"
       >
-        <div
-          class="sc-AxhUy hQjaFy"
+        <th
+          class="sc-AxhCb iXtWFt"
           colspan="1"
+          font-size="lg"
+          font-weight="300"
           role="columnheader"
-          style="display: inline-block; box-sizing: border-box; width: 200px; position: relative;"
+          style="position: relative;"
         >
           Static Column
           <div
-            class="sc-AxgMl cZHRPq"
+            class="sc-AxheI fqZpnc"
             draggable="false"
             role="separator"
             style="cursor: ew-resize;"
           />
-        </div>
-        <div
-          class="sc-AxhUy hQjaFy"
+        </th>
+        <th
+          class="sc-AxhCb iXtWFt"
           colspan="1"
+          font-size="lg"
+          font-weight="300"
           role="columnheader"
-          style="display: inline-block; box-sizing: border-box; width: 200px; position: relative;"
+          style="position: relative;"
         >
           Dynamic Render Column
           <div
-            class="sc-AxgMl cZHRPq"
+            class="sc-AxheI fqZpnc"
             draggable="false"
             role="separator"
             style="cursor: ew-resize;"
           />
-        </div>
-      </div>
-    </div>
-    <div
+        </th>
+      </tr>
+    </thead>
+    <tbody
       class="sc-AxiKw bOTXee"
       role="rowgroup"
     >
-      <div
-        class="sc-AxhCb dwDstZ"
+      <tr
+        class="sc-AxhUy lmQuPA"
+        height="XL"
         role="row"
-        style="display: flex; width: 400px;"
       >
-        <div
-          class="sc-AxhUy hQjaFy"
+        <td
+          class="sc-AxgMl kOVzmj"
+          font-size="md"
           role="cell"
-          style="display: inline-block; box-sizing: border-box; width: 200px;"
         >
           lorem
-        </div>
-        <div
-          class="sc-AxhUy hQjaFy"
+        </td>
+        <td
+          class="sc-AxgMl kOVzmj"
+          font-size="md"
           role="cell"
-          style="display: inline-block; box-sizing: border-box; width: 200px;"
         >
           <b>
             lipsum
           </b>
-        </div>
-      </div>
-      <div
-        class="sc-AxhCb dwDstZ"
+        </td>
+      </tr>
+      <tr
+        class="sc-AxhUy lmQuPA"
+        height="XL"
         role="row"
-        style="display: flex; width: 400px;"
       >
-        <div
-          class="sc-AxhUy hQjaFy"
+        <td
+          class="sc-AxgMl kOVzmj"
+          font-size="md"
           role="cell"
-          style="display: inline-block; box-sizing: border-box; width: 200px;"
         >
           dolor
-        </div>
-        <div
-          class="sc-AxhUy hQjaFy"
+        </td>
+        <td
+          class="sc-AxgMl kOVzmj"
+          font-size="md"
           role="cell"
-          style="display: inline-block; box-sizing: border-box; width: 200px;"
         >
           <b>
             sit
           </b>
-        </div>
-      </div>
-    </div>
-  </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </DocumentFragment>
 `;

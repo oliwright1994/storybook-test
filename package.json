@@ -99,6 +99,7 @@
     "lint-fix": "yarn run lint --quiet --fix",
     "lint-staged": "lint-staged",
     "storybook": "start-storybook -p 6006",
+    "start": "yarn storybook",
     "test": "jest --config testing/config.js",
     "build-storybook": "build-storybook",
     "prepublishOnly": "yarn build"

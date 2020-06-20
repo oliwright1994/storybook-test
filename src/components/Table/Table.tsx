@@ -1,7 +1,6 @@
 import React, { FC, RefObject, useEffect, useRef } from 'react';
 import {
   ColumnInstance,
-  useBlockLayout,
   useResizeColumns,
   UseResizeColumnsColumnProps,
   useTable,
@@ -9,7 +8,7 @@ import {
 } from 'react-table';
 
 import { ITable, TData } from './Table.d';
-import { Resizer, TableBody, TableCell, TableHead, TableRow, TableWrap } from './Table.styled';
+import { Resizer, TableBody, TableCell, TableHead, TableHeadCell, TableRow, TableWrap } from './Table.styled';
 
 interface TableColumn<D extends object = {}>
   extends ColumnInstance<D>,
@@ -30,42 +29,27 @@ const ResizerComponent: FC = properties => {
   return <Resizer {...properties} ref={reference} />;
 };
 
-const defaultColumn = {
-  minWidth: 20,
-  width: 200,
-  maxWidth: 500,
-};
-
 const Table: FC<ITable> = ({ columns, data }) => {
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable<TData>(
     {
       columns,
-      defaultColumn,
       data,
     },
-    useBlockLayout,
     useResizeColumns
   );
 
   return (
-    <TableWrap {...getTableProps()} display="inline-block">
+    <TableWrap {...getTableProps()}>
       <TableHead>
         {headerGroups.map(headerGroup => (
-          <TableRow
-            {...headerGroup.getHeaderGroupProps()}
-            borderBottom="2px"
-            borderColor="background.1"
-            fontWeight="bold"
-            px={1}
-            py={2}
-          >
+          <TableRow {...headerGroup.getHeaderGroupProps()} borderBottom="1px" borderColor="background.1" pb={4}>
             {headerGroup.headers.map(c => {
               const column = (c as unknown) as TableColumn<TData>;
               return (
-                <TableCell {...column.getHeaderProps()}>
+                <TableHeadCell {...column.getHeaderProps()} textAlign="left" pb={2} fontWeight="300" fontSize="lg">
                   {column.render('Header')}
                   <ResizerComponent {...column.getResizerProps()} />
-                </TableCell>
+                </TableHeadCell>
               );
             })}
           </TableRow>
@@ -75,9 +59,11 @@ const Table: FC<ITable> = ({ columns, data }) => {
         {rows.map(row => {
           prepareRow(row);
           return (
-            <TableRow {...row.getRowProps()} borderBottom="2px" borderColor="background.1" p={1}>
+            <TableRow {...row.getRowProps()} borderBottom="1px" borderColor="background.1" p={1} height="XL">
               {row.cells.map(cell => (
-                <TableCell {...cell.getCellProps()}>{cell.render('Cell')}</TableCell>
+                <TableCell {...cell.getCellProps()} py={2} pr={6} fontSize="md">
+                  {cell.render('Cell')}
+                </TableCell>
               ))}
             </TableRow>
           );

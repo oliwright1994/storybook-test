@@ -1,4 +1,4 @@
-export const space = {
+const space = {
   0: '0',
   1: '0.25rem',
   2: '0.5rem',
@@ -20,6 +20,4 @@ export const space = {
   px: '1px',
 };
 
-export const zIndices = [-1, 0, 100, 200, 300, 400, 500, 600, 700, 800];
-
-export const breakpoints = ['30em', '48em', '62em', '80em'];
+export default space;
