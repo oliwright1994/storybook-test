@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
+import React, { FC } from 'react'
 
-import { ITag } from './Tag.d';
-import { STag } from './Tag.styled';
+import { ITag } from './Tag.d'
+import { STag } from './Tag.styled'
 
 const Tag: FC<ITag> = ({ children, messageType, ...props }) => (
   <STag
@@ -18,6 +18,6 @@ const Tag: FC<ITag> = ({ children, messageType, ...props }) => (
   >
     {children}
   </STag>
-);
+)
 
-export default Tag;
+export default Tag

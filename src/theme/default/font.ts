@@ -4,7 +4,7 @@ export const fonts = {
   body:
     '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
   mono: 'SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace',
-};
+}
 
 export const fontSizes = {
   xs: '0.75rem',
@@ -17,19 +17,24 @@ export const fontSizes = {
   '4xl': '2.25rem',
   '5xl': '3rem',
   '6xl': '4rem',
-};
+}
 
 export const fontWeights = {
-  hairline: 100,
+  hairline: 100, // chakra standard
+  ultralight: 100,
   thin: 200,
   light: 300,
   normal: 400,
-  medium: 500,
-  semibold: 600,
+  medium: 500, // chakra standard
+  regular: 500,
+  semibold: 600, // chakra standard
+  demibold: 600,
   bold: 700,
-  extrabold: 800,
-  black: 900,
-};
+  extrabold: 800, // chakra standard
+  ultrabold: 800,
+  black: 900, // chakra standard
+  heavy: 900,
+}
 
 export const letterSpacings = {
   tighter: '-0.05em',
@@ -38,7 +43,7 @@ export const letterSpacings = {
   wide: '0.025em',
   wider: '0.05em',
   widest: '0.1em',
-};
+}
 
 export const lineHeights = {
   normal: 'normal',
@@ -48,4 +53,4 @@ export const lineHeights = {
   base: '1.5',
   tall: '1.625',
   taller: '2',
-};
+}

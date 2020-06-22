@@ -1,8 +1,8 @@
-import { Column } from 'react-table';
+import { Column } from 'react-table'
 
-export type TData = object;
+export type TData = object
 
 export interface ITable {
-  columns: Column<Data>[];
-  data: Data[];
+  columns: Column<Data>[]
+  data: Data[]
 }

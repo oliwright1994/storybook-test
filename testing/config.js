@@ -1,6 +1,6 @@
-const path = require('path');
+const path = require('path')
 
-const testingRoot = path.resolve(__dirname);
+const testingRoot = path.resolve(__dirname)
 
 module.exports = {
   rootDir: path.resolve(process.cwd()),
@@ -26,4 +26,4 @@ module.exports = {
   transform: {
     '^.+.(js|jsx|ts|tsx)$': 'babel-jest',
   },
-};
+}

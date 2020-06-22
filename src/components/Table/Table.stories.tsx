@@ -2,9 +2,10 @@ import { Button } from '@chakra-ui/core';
 import React from 'react';
 import { CellProps } from 'react-table';
 
-import createStory from '../../utils/createStory';
+import createStory from '../../storybook/createStory';
 import Tag from '../Tag';
 import Table from '.';
+import { MessageType } from '../../constants'
 
 createStory(
   'COMPONENTS | Table',
@@ -43,17 +44,17 @@ createStory(
             {
               date: '14:20',
               sender: 'Smart',
-              tags: [{ type: 'info', label: 'Unread' }],
+              tags: [{ type: MessageType.info, label: 'Unread' }],
               subject: "This is the subject of the message you've received",
             },
             {
               date: '15:20',
               sender: 'Smart',
               tags: [
-                { type: 'info', label: 'Unread' },
-                { type: 'warning', label: 'Important' },
+                { type: MessageType.info, label: 'Unread' },
+                { type: MessageType.warning, label: 'Important' },
               ],
-              subject: "You\'ve got 1 month's income left",
+              subject: "You've got 1 month's income left",
             },
             {
               date: '16:20',
@@ -70,7 +71,7 @@ createStory(
             {
               date: '18:20',
               sender: 'Smart',
-              tags: [{ type: 'warning', label: 'Important' }],
+              tags: [{ type: MessageType.warning, label: 'Important' }],
               subject: 'Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus',
             },
           ]}

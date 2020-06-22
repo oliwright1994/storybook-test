@@ -1,14 +1,14 @@
-import { Theme } from 'styled-system';
+import { Theme } from 'styled-system'
 
-import borders from './borders';
-import breakpoints from './breakpoints';
-import colors from './colors';
-import { fonts, fontSizes, fontWeights, letterSpacings, lineHeights } from './font';
-import radii from './radii';
-import shadows from './shadows';
-import sizes from './sizes';
-import space from './space';
-import zIndices from './zIndices';
+import borders from './borders'
+import breakpoints from './breakpoints'
+import colors from './colors'
+import { fonts, fontSizes, fontWeights, letterSpacings, lineHeights } from './font'
+import radii from './radii'
+import shadows from './shadows'
+import sizes from './sizes'
+import space from './space'
+import zIndices from './zIndices'
 
 const defaultTheme: Theme = {
   breakpoints,
@@ -24,6 +24,6 @@ const defaultTheme: Theme = {
   borders,
   radii,
   sizes,
-};
+}
 
-export default defaultTheme;
+export default defaultTheme

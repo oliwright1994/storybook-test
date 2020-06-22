@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 import { withLiveEditScope } from 'storybook-addon-react-live-edit';
 
-import withThemeProvider from '../withThemeProvider';
+import withThemeProvider from '../withStorybookProviders';
 import { Story, StoryOptions } from './createStory.d';
 
 export default function createStory(
@@ -17,8 +17,8 @@ export default function createStory(
 
   if (liveEdit) {
     _stories
-      .addDecorator(withLiveEditScope({ React, [liveEdit.Component.displayName]: liveEdit.Component }))
-      // @ts-ignore
+    .addDecorator(withLiveEditScope({ React, [liveEdit.Component.displayName]: liveEdit.Component }))
+    // @ts-ignore
       .addLiveSource('_dev', liveEdit.render, liveEdit.scope);
   }
 

@@ -18,6 +18,6 @@ const space = {
   56: '14rem',
   64: '16rem',
   px: '1px',
-};
+}
 
-export default space;
+export default space

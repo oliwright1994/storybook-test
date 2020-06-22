@@ -9,7 +9,7 @@ const light = {
   700: '#D6D6D6',
   800: '#D0D0D0',
   900: '#CACACA',
-};
+}
 const dark = {
   50: '#6A6A6A',
   100: '#5E5E5E',
@@ -21,7 +21,7 @@ const dark = {
   700: '#181818',
   800: '#0C0C0C',
   900: '#000',
-};
+}
 const whiteAlpha = {
   50: 'rgba(255, 255, 255, 0.04)',
   100: 'rgba(255, 255, 255, 0.06)',
@@ -33,7 +33,7 @@ const whiteAlpha = {
   700: 'rgba(255, 255, 255, 0.64)',
   800: 'rgba(255, 255, 255, 0.80)',
   900: 'rgba(255, 255, 255, 0.92)',
-};
+}
 const blackAlpha = {
   50: 'rgba(0, 0, 0, 0.04)',
   100: 'rgba(0, 0, 0, 0.06)',
@@ -45,7 +45,7 @@ const blackAlpha = {
   700: 'rgba(0, 0, 0, 0.64)',
   800: 'rgba(0, 0, 0, 0.80)',
   900: 'rgba(0, 0, 0, 0.92)',
-};
+}
 const gray = {
   50: '#F7FAFC',
   100: '#EDF2F7',
@@ -57,7 +57,7 @@ const gray = {
   700: '#2D3748',
   800: '#1A202C',
   900: '#171923',
-};
+}
 const red = {
   50: '#fff5f5',
   100: '#fed7d7',
@@ -69,7 +69,7 @@ const red = {
   700: '#9b2c2c',
   800: '#822727',
   900: '#63171b',
-};
+}
 
 const orange = {
   50: '#FFFAF0',
@@ -82,7 +82,7 @@ const orange = {
   700: '#9C4221',
   800: '#7B341E',
   900: '#652B19',
-};
+}
 const yellow = {
   50: '#fffff0',
   100: '#fefcbf',
@@ -94,7 +94,7 @@ const yellow = {
   700: '#975a16',
   800: '#744210',
   900: '#5F370E',
-};
+}
 const green = {
   50: '#f0fff4',
   100: '#c6f6d5',
@@ -106,7 +106,7 @@ const green = {
   700: '#276749',
   800: '#22543d',
   900: '#1C4532',
-};
+}
 const teal = {
   50: '#E6FFFA',
   100: '#B2F5EA',
@@ -118,7 +118,7 @@ const teal = {
   700: '#285E61',
   800: '#234E52',
   900: '#1D4044',
-};
+}
 const blue = {
   50: '#ebf8ff',
   100: '#ceedff',
@@ -130,7 +130,7 @@ const blue = {
   700: '#1e4e8c',
   800: '#153e75',
   900: '#1a365d',
-};
+}
 const cyan = {
   50: '#EDFDFD',
   100: '#C4F1F9',
@@ -142,7 +142,7 @@ const cyan = {
   700: '#0987A0',
   800: '#086F83',
   900: '#065666',
-};
+}
 const purple = {
   50: '#faf5ff',
   100: '#e9d8fd',
@@ -154,7 +154,7 @@ const purple = {
   700: '#553c9a',
   800: '#44337a',
   900: '#322659',
-};
+}
 const pink = {
   50: '#fff5f7',
   100: '#fed7e2',
@@ -166,7 +166,7 @@ const pink = {
   700: '#97266d',
   800: '#702459',
   900: '#521B41',
-};
+}
 
 export default {
   transparent: 'transparent',
@@ -191,4 +191,4 @@ export default {
   warning: [yellow[100], yellow[400], yellow[700]],
   danger: [red[100], red[400], red[700]],
   info: [blue[100], blue[400], blue[700]],
-};
+}

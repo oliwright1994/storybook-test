@@ -1,8 +1,8 @@
-import { render } from '@testing-library/react';
-import React from 'react';
-import { CellProps } from 'react-table';
+import { render } from '@testing-library/react'
+import React from 'react'
+import { CellProps } from 'react-table'
 
-import Table from '.';
+import Table from '.'
 
 const props = {
   columns: [
@@ -26,11 +26,11 @@ const props = {
       col2: 'sit',
     },
   ],
-};
+}
 
 describe('<Table />', () => {
   it('should render as expected', () => {
-    const { asFragment } = render(<Table {...props} />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+    const { asFragment } = render(<Table {...props} />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+})

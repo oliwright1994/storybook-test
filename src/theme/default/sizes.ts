@@ -41,6 +41,6 @@ const sizes = {
   L: 32,
   XL: 52,
   XXL: 84,
-};
+}
 
-export default sizes;
+export default sizes

@@ -1,5 +1,5 @@
-export type TMessage = 'success' | 'info' | 'warning' | 'danger';
+import { MessageType } from '../../constants'
 
 export interface ITag {
-  messageType: TMessage;
+  messageType: MessageType
 }

@@ -1,22 +1,26 @@
-import { ThemeProvider as ChakraThemeProvider } from '@chakra-ui/core';
-import React, { FC } from 'react';
-import { ThemeProvider } from 'styled-components';
-import { Theme } from 'styled-system';
+import { ThemeProvider as ChakraThemeProvider } from '@chakra-ui/core'
+import React, { FC } from 'react'
+import { ThemeProvider } from 'styled-components'
+import { Theme } from 'styled-system'
 
-import mergeThemes from '../../utils/mergeThemes';
+import GlobalStyles from '../../style/GlobalStyles'
+import mergeTheme from '../../theme/mergeTheme'
 
 interface IBrightProvider {
-  theme: Theme;
+  theme: Theme
 }
 
 const BrightProvider: FC<IBrightProvider> = ({ children, theme }) => {
-  const mergedTheme = mergeThemes([theme]);
+  const mergedTheme = mergeTheme(theme)
 
   return (
     <ThemeProvider theme={theme}>
-      <ChakraThemeProvider theme={mergedTheme}>{children}</ChakraThemeProvider>
+      <ChakraThemeProvider theme={mergedTheme}>
+        <GlobalStyles />
+        {children}
+      </ChakraThemeProvider>
     </ThemeProvider>
-  );
-};
+  )
+}
 
-export default BrightProvider;
+export default BrightProvider

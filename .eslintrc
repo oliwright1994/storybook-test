@@ -23,7 +23,7 @@
     "prettier/prettier": [
       "error",
       {
-        "semi": true,
+        "semi": false,
         "trailingComma": "es5",
         "singleQuote": true,
         "printWidth": 120,
@@ -45,6 +45,7 @@
           "**/*.test.tsx",
           "**/*.stories.tsx",
           "testing/**",
+          "storybook/**",
           "src/utils/withThemeProvider/**",
           "src/utils/createStory/**"
         ]
