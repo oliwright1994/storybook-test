@@ -22,12 +22,6 @@ exports[`<Table /> should render as expected 1`] = `
           style="position: relative;"
         >
           Static Column
-          <div
-            class="sc-AxheI fqZpnc"
-            draggable="false"
-            role="separator"
-            style="cursor: ew-resize;"
-          />
         </th>
         <th
           class="sc-AxhCb iXtWFt"
@@ -38,12 +32,6 @@ exports[`<Table /> should render as expected 1`] = `
           style="position: relative;"
         >
           Dynamic Render Column
-          <div
-            class="sc-AxheI fqZpnc"
-            draggable="false"
-            role="separator"
-            style="cursor: ew-resize;"
-          />
         </th>
       </tr>
     </thead>

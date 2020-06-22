@@ -5,21 +5,14 @@ import createStory from '../../storybook/createStory';
 import Tag from '.';
 import { MessageType } from '../../constants';
 
-const options = {
-  success: 'success',
-  warning: 'warning',
-  danger: 'danger',
-  info: 'info',
-};
-
 createStory(
   'COMPONENTS | Tag',
   [
     {
-      label: 'success',
+      label: 'standard',
       jsx: () => {
-        const messageType = select('messageType', options, options.success, 'messageType');
-        return <Tag messageType={messageType as MessageType}>{messageType}</Tag>;
+        const messageType = select('messageType', MessageType, MessageType.success, 'messageType');
+        return <Tag messageType={messageType}>{messageType}</Tag>;
       },
     },
   ],
