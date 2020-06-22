@@ -11,9 +11,9 @@ module.exports = {
   collectCoverageFrom: ['src/**/*.(ts|tsx)', '!src/**/*.(styled|stories|test).(ts|tsx)', '!src/theme/**'],
   coverageThreshold: {
     global: {
-      branches: 80,
-      functions: 80,
-      lines: 80,
+      branches: 100,
+      functions: 100,
+      lines: 100,
     },
   },
   moduleNameMapper: {
