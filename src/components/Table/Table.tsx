@@ -1,13 +1,26 @@
 import React, { FC } from 'react'
-import { ColumnInstance, useResizeColumns, UseResizeColumnsColumnProps, useTable, UseTableCellProps } from 'react-table'
+import {
+  Cell,
+  ColumnInstance,
+  useResizeColumns,
+  UseResizeColumnsColumnProps,
+  useTable,
+  UseTableCellProps,
+} from 'react-table'
 
 import { ITable, TData } from './Table.d'
-import { TableBody, TableCell, TableHead, TableHeadCell, TableRow, TableWrap } from './Table.styled'
+import { STableBody, STableCell, STableHead, STableHeadCell, STableRow, STableWrap } from './Table.styled'
 
-interface TableColumn<D extends object = {}>
+interface ITableColumn<D extends object = {}>
   extends ColumnInstance<D>,
     UseResizeColumnsColumnProps<D>,
     UseTableCellProps<D> {}
+
+const renderTableCell = (cell: Cell): JSX.Element => (
+  <STableCell {...cell.getCellProps()} py={2} pr={6} fontSize="md">
+    {cell.render('Cell')}
+  </STableCell>
+)
 
 const Table: FC<ITable> = ({ columns, data }) => {
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable<TData>(
@@ -19,36 +32,32 @@ const Table: FC<ITable> = ({ columns, data }) => {
   )
 
   return (
-    <TableWrap {...getTableProps()}>
-      <TableHead>
+    <STableWrap {...getTableProps()}>
+      <STableHead>
         {headerGroups.map(headerGroup => (
-          <TableRow {...headerGroup.getHeaderGroupProps()} borderBottom="1px" borderColor="background.1" pb={4}>
+          <STableRow {...headerGroup.getHeaderGroupProps()} borderBottom="1px" borderColor="background.1" pb={4}>
             {headerGroup.headers.map(c => {
-              const column = (c as unknown) as TableColumn<TData>
+              const column = (c as unknown) as ITableColumn<TData>
               return (
-                <TableHeadCell {...column.getHeaderProps()} textAlign="left" pb={2} fontWeight="300" fontSize="lg">
+                <STableHeadCell {...column.getHeaderProps()} textAlign="left" pb={2} fontWeight="300" fontSize="lg">
                   {column.render('Header')}
-                </TableHeadCell>
+                </STableHeadCell>
               )
             })}
-          </TableRow>
+          </STableRow>
         ))}
-      </TableHead>
-      <TableBody {...getTableBodyProps()}>
+      </STableHead>
+      <STableBody {...getTableBodyProps()}>
         {rows.map(row => {
           prepareRow(row)
           return (
-            <TableRow {...row.getRowProps()} borderBottom="1px" borderColor="background.1" p={1} height="XL">
-              {row.cells.map(cell => (
-                <TableCell {...cell.getCellProps()} py={2} pr={6} fontSize="md">
-                  {cell.render('Cell')}
-                </TableCell>
-              ))}
-            </TableRow>
+            <STableRow {...row.getRowProps()} borderBottom="1px" borderColor="background.1" p={1} height="XL">
+              {row.cells.map(renderTableCell)}
+            </STableRow>
           )
         })}
-      </TableBody>
-    </TableWrap>
+      </STableBody>
+    </STableWrap>
   )
 }
 

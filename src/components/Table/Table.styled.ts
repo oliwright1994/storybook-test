@@ -14,26 +14,26 @@ import {
   TypographyProps,
 } from 'styled-system'
 
-export const TableWrap = styled.table`
+export const STableWrap = styled.table`
   border-collapse: collapse;
 `
 
-export const TableHead = styled.thead``
-export const TableBody = styled.tbody``
-export const TableHeadCell = styled.th<TypographyProps & PaddingProps & FontWeightProps & FontSizeProps>`
+export const STableHead = styled.thead``
+export const STableBody = styled.tbody``
+export const STableHeadCell = styled.th<TypographyProps & PaddingProps & FontWeightProps & FontSizeProps>`
   ${typography}
   ${padding}
   ${fontWeight}
   ${fontSize}
 `
 
-export const TableRow = styled.tr<BorderProps & PaddingProps & LayoutProps>`
+export const STableRow = styled.tr<BorderProps & PaddingProps & LayoutProps>`
   ${border}
   ${padding}
   ${layout}
 `
 
-export const TableCell = styled.td<LayoutProps & PaddingProps & FontSizeProps>`
+export const STableCell = styled.td<LayoutProps & PaddingProps & FontSizeProps>`
   ${layout}
   ${padding}
   ${fontSize}
