@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { ThemeProvider as ChakraThemeProvider } from '@chakra-ui/core'
 import React, { FC } from 'react'
 import { ThemeProvider } from 'styled-components'

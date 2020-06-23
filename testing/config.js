@@ -8,7 +8,13 @@ module.exports = {
   bail: false,
   verbose: true, // use --silent to hide log
   collectCoverage: false, // run with --coverage if need coverage
-  collectCoverageFrom: ['src/**/*.(ts|tsx)', '!src/**/*.(styled|stories|test).(ts|tsx)', '!src/theme/**'],
+  collectCoverageFrom: [
+    'src/**/*.(ts|tsx)',
+    '!src/**/*.(styled|stories|test).(ts|tsx)',
+    '!src/theme/**',
+    '!src/storybook/**',
+    '!src/style/**',
+  ],
   coverageThreshold: {
     global: {
       branches: 100,
