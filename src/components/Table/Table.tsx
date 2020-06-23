@@ -22,6 +22,12 @@ const renderTableCell = (cell: Cell): JSX.Element => (
   </STableCell>
 )
 
+const renderTableHeaderCell = (column: ColumnInstance): JSX.Element => (
+  <STableHeadCell {...column.getHeaderProps()} textAlign="left" pb={2} fontWeight="300" fontSize="lg">
+    {column.render('Header')}
+  </STableHeadCell>
+)
+
 const Table: FC<ITable> = ({ columns, data }) => {
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable<TData>(
     {
@@ -36,14 +42,7 @@ const Table: FC<ITable> = ({ columns, data }) => {
       <STableHead>
         {headerGroups.map(headerGroup => (
           <STableRow {...headerGroup.getHeaderGroupProps()} borderBottom="1px" borderColor="background.1" pb={4}>
-            {headerGroup.headers.map(c => {
-              const column = (c as unknown) as ITableColumn<TData>
-              return (
-                <STableHeadCell {...column.getHeaderProps()} textAlign="left" pb={2} fontWeight="300" fontSize="lg">
-                  {column.render('Header')}
-                </STableHeadCell>
-              )
-            })}
+            {headerGroup.headers.map(renderTableHeaderCell)}
           </STableRow>
         ))}
       </STableHead>
