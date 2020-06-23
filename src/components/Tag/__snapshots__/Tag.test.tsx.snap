@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tag /> should render as expected 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-AxjAm isQkMb"
+    color="success.2"
+    font-size="xs"
+    font-weight="4"
+  >
+    success
+  </div>
+</DocumentFragment>
+`;

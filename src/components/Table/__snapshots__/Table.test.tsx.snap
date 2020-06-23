@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Table /> should render as expected 1`] = `
+<DocumentFragment>
+  <table
+    class="sc-AxjAm lmudYF"
+    role="table"
+  >
+    <thead
+      class="sc-AxirZ ktnnZK"
+    >
+      <tr
+        class="sc-AxhUy eHCoFN"
+        role="row"
+      >
+        <th
+          class="sc-AxhCb iXtWFt"
+          colspan="1"
+          font-size="lg"
+          font-weight="300"
+          role="columnheader"
+          style="position: relative;"
+        >
+          Static Column
+        </th>
+        <th
+          class="sc-AxhCb iXtWFt"
+          colspan="1"
+          font-size="lg"
+          font-weight="300"
+          role="columnheader"
+          style="position: relative;"
+        >
+          Dynamic Render Column
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="sc-AxiKw bOTXee"
+      role="rowgroup"
+    >
+      <tr
+        class="sc-AxhUy lmQuPA"
+        height="XL"
+        role="row"
+      >
+        <td
+          class="sc-AxgMl kOVzmj"
+          font-size="md"
+          role="cell"
+        >
+          lorem
+        </td>
+        <td
+          class="sc-AxgMl kOVzmj"
+          font-size="md"
+          role="cell"
+        >
+          <b>
+            lipsum
+          </b>
+        </td>
+      </tr>
+      <tr
+        class="sc-AxhUy lmQuPA"
+        height="XL"
+        role="row"
+      >
+        <td
+          class="sc-AxgMl kOVzmj"
+          font-size="md"
+          role="cell"
+        >
+          dolor
+        </td>
+        <td
+          class="sc-AxgMl kOVzmj"
+          font-size="md"
+          role="cell"
+        >
+          <b>
+            sit
+          </b>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;

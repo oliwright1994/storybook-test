@@ -14,8 +14,10 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react"
+    "jsx": "react",
+    "typeRoots": ["./declarations"],
+    "types": ["jest", "node"]
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist", "src/**/*.stories.tsx"]
+  "include": ["src", "declarations", "testing"],
+  "exclude": ["node_modules", "dist"]
 }
