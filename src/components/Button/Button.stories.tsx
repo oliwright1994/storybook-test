@@ -3,42 +3,44 @@ import createStory from '../../storybook/createStory'
 import Button from '.'
 import { ButtonStyleType } from './constants'
 
+const commonProps = {
+  onClick: () => {}
+}
+
+const styleVariants = Object.keys(ButtonStyleType).map((variant) => {
+  return (
+    {
+      label: variant,
+      jsx: () => <Button {...commonProps} style={variant as ButtonStyleType}>This is a {variant} button</Button>
+    }
+  )
+});
+
 createStory(
   'COMPONENTS | Button',
   [
+    ...styleVariants,
     {
-      label: 'primary',
+      label: 'sizes',
       jsx: () => (
         <>
-          <Button onClick={() => {}} size={'sm'}>This is a primary sm button</Button>
-          <Button onClick={() => {}} size={'lg'}>This is a primary lg button</Button>
+          <Button {...commonProps} size={'sm'}>This is a sm button</Button>
+          <Button {...commonProps} size={'lg'}>This is a lg button</Button>
         </>
-      )
-    },
-    {
-      label: 'secondary',
-      jsx: () => (
-        <Button style={ButtonStyleType.secondary} onClick={() => {}}>This is a secondary button</Button>
-      )
-    },
-    {
-      label: 'danger',
-      jsx: () => (
-        <Button style={ButtonStyleType.danger} onClick={() => {}}>This is a danger button</Button>
       )
     },
     {
       label: 'disabled',
       jsx: () => (
-        <Button onClick={() => {}}  isDisabled={true}>This is a disabled button</Button>
+        <Button {...commonProps} isDisabled={true}>This is a disabled button</Button>
       )
     },
     {
       label: 'with icon',
       jsx: () => (
         <>
-          <div><Button style={ButtonStyleType.primary} onClick={() => {}} rightIcon={'email'}>This is a primary button with right icon</Button></div>
-          <div><Button style={ButtonStyleType.primary} onClick={() => {}} leftIcon={'email'}>This is a primary button with left icon</Button></div>
+          <Button {...commonProps} rightIcon={'email'}>This is a button with right icon</Button>
+          <Button {...commonProps} leftIcon={'email'}>This is a button with left icon</Button>
         </>
       )
     },
