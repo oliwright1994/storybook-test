@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-import { ThemeProvider as ChakraThemeProvider } from '@chakra-ui/core'
+import { CSSReset, ThemeProvider as ChakraThemeProvider } from '@chakra-ui/core'
 import React, { FC } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { Theme } from 'styled-system'
@@ -17,6 +17,7 @@ const BrightProvider: FC<IBrightProvider> = ({ children, theme }) => {
   return (
     <ThemeProvider theme={theme}>
       <ChakraThemeProvider theme={mergedTheme}>
+        <CSSReset />
         <GlobalStyles />
         {children}
       </ChakraThemeProvider>
