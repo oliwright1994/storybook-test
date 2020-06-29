@@ -1,49 +1,30 @@
 import React from 'react'
 import createStory from '../../storybook/createStory'
 import Button from '.'
-import { ButtonStyleType } from './constants'
-
-const commonProps = {
-  onClick: () => {}
-}
-
-const styleVariants = Object.keys(ButtonStyleType).map((variant) => {
-  return (
-    {
-      label: variant,
-      jsx: () => <Button {...commonProps} style={variant as ButtonStyleType}>This is a {variant} button</Button>
-    }
-  )
-});
+import { ButtonSize, ButtonVariant } from './constants'
+import { select, boolean, radios } from '@storybook/addon-knobs'
 
 createStory(
   'COMPONENTS | Button',
   [
-    ...styleVariants,
     {
-      label: 'sizes',
-      jsx: () => (
-        <>
-          <Button {...commonProps} size={'sm'}>This is a sm button</Button>
-          <Button {...commonProps} size={'lg'}>This is a lg button</Button>
-        </>
-      )
-    },
-    {
-      label: 'disabled',
-      jsx: () => (
-        <Button {...commonProps} isDisabled={true}>This is a disabled button</Button>
-      )
-    },
-    {
-      label: 'with icon',
-      jsx: () => (
-        <>
-          <Button {...commonProps} rightIcon={'email'}>This is a button with right icon</Button>
-          <Button {...commonProps} leftIcon={'email'}>This is a button with left icon</Button>
-        </>
-      )
+      label: 'standard',
+      jsx: () => {
+        const variant = select('Variant', ButtonVariant, ButtonVariant.primary);
+        const size = select('Size', ButtonSize, ButtonSize.lg);
+        const disabled = boolean('Disabled', false);
+        const icon = radios('Icon', {none: 'no', left: 'left', right: 'right'}, 'no');
+        return <Button
+          onClick={() => {}}
+          variant={variant}
+          size={size}
+          isDisabled={disabled}
+          leftIcon={icon === 'left' ? 'email' : undefined}
+          rightIcon={icon === 'right' ? 'email' : undefined}
+        >
+          I am a {variant} {size.toUpperCase()} button with {icon} icon
+        </Button>;
+      },
     },
   ],
-  {}
 );

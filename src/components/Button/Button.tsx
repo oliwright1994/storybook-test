@@ -2,25 +2,23 @@ import { Button as ChakraButton } from '@chakra-ui/core'
 import React from 'react'
 
 import { IButton } from './Button.d'
-import { ButtonStyleType } from './constants'
+import { ButtonSize, ButtonVariant } from './constants'
 
 const variantMap: Record<string, string> = {
-  [ButtonStyleType.primary]: 'blue',
-  [ButtonStyleType.secondary]: 'gray',
-  [ButtonStyleType.danger]: 'red',
+  [ButtonVariant.primary]: 'blue',
+  [ButtonVariant.secondary]: 'gray',
+  [ButtonVariant.danger]: 'red',
 }
 
-const Button: React.FC<IButton> = ({ children, style, ...props }) => {
-  return (
-    <ChakraButton {...props} variantColor={variantMap[style || ButtonStyleType.primary]}>
-      {children}
-    </ChakraButton>
-  )
-}
+const Button: React.FC<IButton> = ({ children, variant, ...props }) => (
+  <ChakraButton {...props} variantColor={variantMap[variant || ButtonVariant.primary]}>
+    {children}
+  </ChakraButton>
+)
 
 Button.defaultProps = {
-  size: 'lg',
-  style: ButtonStyleType.primary,
+  size: ButtonSize.lg,
+  variant: ButtonVariant.primary,
 }
 
 export default Button
