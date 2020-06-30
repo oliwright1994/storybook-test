@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Stack /> should render as expected 1`] = `
+<div>
+  <div
+    class="css-1lxwves"
+  >
+    <div
+      class="css-0"
+    >
+      <p
+        class="css-fzcsno"
+      >
+        Test One
+      </p>
+    </div>
+    <div
+      class="css-8kn4zf"
+    >
+      <p
+        class="css-fzcsno"
+      >
+        Test Two
+      </p>
+    </div>
+    <div
+      class="css-8kn4zf"
+    >
+      <p
+        class="css-fzcsno"
+      >
+        Test Three
+      </p>
+    </div>
+  </div>
+</div>
+`;

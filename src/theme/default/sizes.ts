@@ -33,14 +33,6 @@ const sizes = {
   sm: '24rem',
   xl: '36rem',
   xs: '20rem',
-  // bright specific sizes
-  XXS: 4,
-  XS: 8,
-  S: 12,
-  M: 20,
-  L: 32,
-  XL: 52,
-  XXL: 84,
 }
 
 export default sizes

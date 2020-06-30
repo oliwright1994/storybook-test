@@ -1,6 +1,3 @@
-export enum MessageType {
-  success = 'success',
-  info = 'info',
-  warning = 'warning',
-  danger = 'danger',
-}
+export * from './alignment'
+export * from './messageType'
+export * from './space'

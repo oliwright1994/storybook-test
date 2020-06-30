@@ -18,6 +18,14 @@ const space = {
   56: '14rem',
   64: '16rem',
   px: '1px',
+  none: 0,
+  xxs: 4,
+  xs: 8,
+  s: 12,
+  m: 20,
+  l: 32,
+  xl: 52,
+  xxl: 84,
 }
 
 export default space
