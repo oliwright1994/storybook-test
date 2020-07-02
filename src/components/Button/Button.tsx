@@ -1,8 +1,13 @@
-import { Button as ChakraButton } from '@chakra-ui/core'
-import React from 'react'
+import { Button as ChakraButton, ButtonProps } from '@chakra-ui/core'
+import React, { FC } from 'react'
 
-import { IButton } from './Button.d'
 import { ButtonSize, ButtonVariant } from './constants'
+
+interface IButton extends Pick<ButtonProps, 'leftIcon' | 'rightIcon' | 'isDisabled'> {
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void
+  variant?: ButtonVariant
+  size?: ButtonSize
+}
 
 const variantMap: Record<string, string> = {
   [ButtonVariant.primary]: 'blue',
@@ -10,15 +15,10 @@ const variantMap: Record<string, string> = {
   [ButtonVariant.danger]: 'red',
 }
 
-const Button: React.FC<IButton> = ({ children, variant, ...props }) => (
-  <ChakraButton {...props} variantColor={variantMap[variant || ButtonVariant.primary]}>
+const Button: FC<IButton> = ({ onClick, variant = ButtonVariant.primary, size = ButtonSize.lg, children }) => (
+  <ChakraButton onClick={onClick} variantColor={variantMap[variant || ButtonVariant.primary]} size={size}>
     {children}
   </ChakraButton>
 )
-
-Button.defaultProps = {
-  size: ButtonSize.lg,
-  variant: ButtonVariant.primary,
-}
 
 export default Button
