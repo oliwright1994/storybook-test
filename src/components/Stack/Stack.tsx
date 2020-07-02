@@ -2,7 +2,7 @@ import { Box, Flex } from '@chakra-ui/core'
 import React, { FC } from 'react'
 
 import { HorizontalAlignment, Space } from '../../constants'
-import { StackElement } from './constants'
+import { StackElement, StackItemElement } from './constants'
 
 interface IStack {
   as?: StackElement
@@ -10,8 +10,11 @@ interface IStack {
   alignItems?: HorizontalAlignment
   dividers?: boolean
 }
-
-const { ol, ul, div } = StackElement
+interface IStackItem {
+  as: StackItemElement
+  space?: Space
+  alignItems: HorizontalAlignment
+}
 
 const alignItemsMap = {
   left: 'flex-start',
@@ -19,31 +22,39 @@ const alignItemsMap = {
   right: 'flex-end',
 }
 
+const StackItem: FC<IStackItem> = ({ alignItems, space, ...props }) => (
+  <Flex direction="column" alignItems={alignItemsMap[alignItems]} mt={space} {...props} />
+)
+
 const Stack: FC<IStack> = ({
   children,
-  as = div,
+  as = StackElement.div,
   space = Space.none,
   alignItems = HorizontalAlignment.left,
   dividers,
 }) => {
-  const isList = as === ol || as === ul
-  const stackItemComponent = isList ? 'li' : div
+  const isList = as === StackElement.ol || as === StackElement.ul
+  const stackItemElement = isList ? StackItemElement.div : StackItemElement.li
+  const stackItemProps: IStackItem = {
+    as: stackItemElement,
+    alignItems,
+  }
 
   return (
-    <Flex as={as} flexDirection="column" alignItems={alignItemsMap[alignItems]}>
+    <Box as={as}>
       {React.Children.map(children, (child, index) =>
         index === 0 ? (
-          <Box as={stackItemComponent}>{child}</Box>
+          <StackItem {...stackItemProps}>{child}</StackItem>
         ) : (
           <>
-            {dividers && <Box as="hr" alignSelf="stretch" mt={space} />}
-            <Box as={stackItemComponent} mt={space}>
+            {dividers && <Box as="hr" mt={space} />}
+            <StackItem {...stackItemProps} space={space}>
               {child}
-            </Box>
+            </StackItem>
           </>
         )
       )}
-    </Flex>
+    </Box>
   )
 }
 

@@ -1,9 +1,9 @@
-import { select } from '@storybook/addon-knobs';
-import React from 'react';
+import { select } from '@storybook/addon-knobs'
+import React from 'react'
 
-import createStory from '../../storybook/createStory';
-import Tag from '.';
-import { MessageType } from '../../constants';
+import { MessageType } from '../../constants'
+import createStory from '../../storybook/createStory'
+import Tag from '.'
 
 createStory(
   'COMPONENTS | Tag',
@@ -11,10 +11,10 @@ createStory(
     {
       label: 'standard',
       jsx: () => {
-        const messageType = select('messageType', MessageType, MessageType.success, 'messageType');
-        return <Tag messageType={messageType}>{messageType}</Tag>;
+        const messageType = select('messageType', MessageType, MessageType.success, 'messageType')
+        return <Tag messageType={messageType}>{messageType}</Tag>
       },
     },
   ],
   { liveEdit: { Component: Tag, render: 'return <Tag messageType="info">hi</Tag>' } }
-);
+)

@@ -1,11 +1,10 @@
 import { Text } from '@chakra-ui/core'
-import { select, boolean } from '@storybook/addon-knobs'
+import { boolean, select } from '@storybook/addon-knobs'
 import React from 'react'
 
-import Stack from './Stack'
 import { HorizontalAlignment, Space } from '../../constants'
-
 import createStory from '../../storybook/createStory'
+import Stack from './Stack'
 
 createStory('COMPONENTS | Stack', [
   {

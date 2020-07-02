@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> should render without errors 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-AxjAm ijXSuZ css-0"
+    role="group"
+  >
+    <label
+      class="sc-AxirZ lgJgCc css-176s5fq"
+      for="input-label"
+    >
+      label
+    </label>
+    <input
+      aria-describedby="aria describedby"
+      aria-disabled="false"
+      aria-invalid="false"
+      aria-label="aria label"
+      aria-readonly="false"
+      aria-required="false"
+      class="sc-AxhCb ljkdYI css-1k3bgbv"
+      id="input-label"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;

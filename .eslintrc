@@ -17,6 +17,23 @@
       "rules": {
         "@typescript-eslint/no-var-requires": 0
       }
+    },
+    {
+      "files": ["*.stories.tsx", "*.test.tsx"],
+      "rules": {
+        "@typescript-eslint/no-unsafe-call": 0,
+        "@typescript-eslint/no-unsafe-member-access": 0,
+        "@typescript-eslint/no-unsafe-assignment": 0,
+        "sonarjs/no-duplicate-string": 0
+      }
+    },
+    {
+      "files": ["*.test.tsx"],
+      "rules": {
+        "promise/catch-or-return": 0,
+        "@typescript-eslint/no-floating-promises": 0,
+        "jest/valid-expect-in-promise": 0
+      }
     }
   ],
   "rules": {

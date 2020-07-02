@@ -19,5 +19,8 @@
     "types": ["jest", "node"]
   },
   "include": ["src", "declarations", "testing"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

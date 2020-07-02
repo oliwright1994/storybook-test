@@ -1,10 +1,12 @@
 import { withInfo } from '@storybook/addon-info'
 import { storiesOf } from '@storybook/react'
 import React from 'react'
-import { withLiveEditScope } from 'storybook-addon-react-live-edit'
+import { setOptions, withLiveEditScope } from 'storybook-addon-react-live-edit'
 
 import withThemeProvider from '../withStorybookProviders'
 import { Story, StoryOptions } from './createStory.d'
+
+setOptions({ presets: ['react'] })
 
 export default function createStory(
   name: string,
@@ -17,9 +19,9 @@ export default function createStory(
 
   if (liveEdit) {
     _stories
-      .addDecorator(withLiveEditScope({ React, [liveEdit.Component.displayName]: liveEdit.Component }))
-      // @ts-ignore
-      .addLiveSource('_dev', liveEdit.render, liveEdit.scope)
+    .addDecorator(withLiveEditScope({ React, [liveEdit.Component.displayName]: liveEdit.Component }))
+    // @ts-ignore
+    .addLiveSource('_dev', liveEdit.render, liveEdit.scope)
   }
 
   stories.forEach((story: Story): void => {
