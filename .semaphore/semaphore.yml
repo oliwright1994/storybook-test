@@ -1,0 +1,23 @@
+version: v1.0
+name: Test Bright Storybook
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+blocks:
+  - name: Jest tests
+    task:
+      secrets:
+        - name: github-packages-npm
+      jobs:
+        - name: Test
+          commands:
+            - checkout
+            - sem-version node 12
+            - cache restore
+            - yarn install
+            - cache store
+            - yarn build --if-present
+            - yarn test
+      secrets:
+        - name: eslint-config
