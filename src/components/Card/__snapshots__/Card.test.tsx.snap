@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> should render as expected 1`] = `
+<div>
+  <div
+    class="css-4iz7qw"
+  >
+    <p
+      class="css-fzcsno"
+    >
+      Test One
+    </p>
+    <p
+      class="css-fzcsno"
+    >
+      Test Two
+    </p>
+    <p
+      class="css-fzcsno"
+    >
+      Test Three
+    </p>
+  </div>
+</div>
+`;
