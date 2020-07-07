@@ -1,9 +1,10 @@
 import { Text } from '@chakra-ui/core'
 import React from 'react'
+
 import { MessageType } from '../../constants'
 import createStory from '../../storybook/createStory'
-import Card from './Card'
 import Tag from '../Tag'
+import Card from './Card'
 
 createStory('COMPONENTS | Card', [
   {

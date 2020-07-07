@@ -19,5 +19,3 @@ blocks:
             - cache store
             - yarn build --if-present
             - yarn test
-      secrets:
-        - name: eslint-config
