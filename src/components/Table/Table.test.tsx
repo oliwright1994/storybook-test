@@ -13,7 +13,7 @@ const props = {
     {
       Header: 'Dynamic Render Column',
       accessor: 'col2',
-      Cell: ({ row }: CellProps<object>) => <b>{row.values.col2}</b>,
+      Cell: ({ row }: CellProps<Record<string, unknown>>) => <b>{row.values.col2}</b>,
     },
   ],
   data: [

@@ -3,7 +3,7 @@
 exports[`<Button /> should render as expected 1`] = `
 <DocumentFragment>
   <button
-    class="css-1inosfr"
+    class="css-1or62k6"
     type="button"
   >
     I am a button

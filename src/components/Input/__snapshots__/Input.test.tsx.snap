@@ -3,26 +3,43 @@
 exports[`<Input /> should render without errors 1`] = `
 <DocumentFragment>
   <div
-    class="sc-AxjAm ijXSuZ css-0"
+    class="css-0"
     role="group"
   >
-    <label
-      class="sc-AxirZ lgJgCc css-176s5fq"
-      for="input-label"
+    <div
+      class="css-0"
     >
-      label
-    </label>
-    <input
-      aria-describedby="aria describedby"
-      aria-disabled="false"
-      aria-invalid="false"
-      aria-label="aria label"
-      aria-readonly="false"
-      aria-required="false"
-      class="sc-AxhCb ljkdYI css-1k3bgbv"
-      id="input-label"
-      value=""
-    />
+      <li
+        class="css-1lxwves"
+      >
+        <label
+          class="css-hny2kg"
+          for="input"
+        >
+          label
+        </label>
+      </li>
+      <li
+        class="css-qzdso"
+      />
+      <li
+        class="css-qzdso"
+      >
+        <input
+          aria-describedby="aria describedby"
+          aria-disabled="false"
+          aria-invalid="false"
+          aria-label="aria label"
+          aria-readonly="false"
+          aria-required="false"
+          class="css-1az41tb"
+          id="input"
+        />
+      </li>
+      <li
+        class="css-qzdso"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;

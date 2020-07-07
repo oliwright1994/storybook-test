@@ -11,7 +11,7 @@ import {
 import { ITable, TData } from './Table.d'
 import { STableBody, STableCell, STableHead, STableHeadCell, STableRow, STableWrap } from './Table.styled'
 
-interface ITableColumn<D extends object = {}>
+interface ITableColumn<D extends Record<string, unknown> = Record<string, unknown>>
   extends ColumnInstance<D>,
     UseResizeColumnsColumnProps<D>,
     UseTableCellProps<D> {}

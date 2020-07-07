@@ -1,11 +1,13 @@
 import { Button } from '@chakra-ui/core'
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { CellProps } from 'react-table'
 
 import { MessageType } from '../../constants'
 import createStory from '../../storybook/createStory'
 import Tag from '../Tag'
 import Table from '.'
+
+const CANCEL_ACTION = 'Cancel transaction'
 
 createStory('COMPONENTS | Table', [
   {
@@ -24,8 +26,8 @@ createStory('COMPONENTS | Table', [
           {
             Header: '',
             accessor: 'tags',
-            Cell: ({ row }: CellProps<object>) =>
-              row.values.tags.map((tag: any) => (
+            Cell: ({ row }: CellProps<Record<string, unknown>>) =>
+              row.values.tags.map((tag: { type: MessageType; label: string }) => (
                 <span style={{ marginRight: 2 }}>
                   <Tag messageType={tag.type} key={tag.label}>
                     {tag.label}
@@ -97,8 +99,8 @@ createStory('COMPONENTS | Table', [
           {
             Header: '',
             accessor: 'actions',
-            Cell: ({ row }: CellProps<object>) =>
-              row.values.actions.map((action: string) => <Button height="auto">{action}</Button>),
+            Cell: ({ row }: CellProps<Record<string, unknown>>) =>
+              row.values.actions.map((action: string): ReactNode => <Button height="auto">{action}</Button>),
           },
         ]}
         data={[
@@ -107,21 +109,21 @@ createStory('COMPONENTS | Table', [
             from: 'Rainy day pot',
             to: 'Flexible income pot',
             amount: '£2,000.00',
-            actions: ['Cancel transaction'],
+            actions: [CANCEL_ACTION],
           },
           {
-            date: '23 Sep 2019',
+            date: '24 Sep 2019',
             from: 'Inheritance pot',
             to: 'Later life pot',
             amount: '£2,000.00',
-            actions: ['Cancel transaction'],
+            actions: [CANCEL_ACTION],
           },
           {
-            date: '23 Sep 2019',
+            date: '25 Sep 2019',
             from: 'Flexible income potpot',
             to: 'Paid out',
             amount: '-£225.00',
-            actions: ['Cancel transaction'],
+            actions: [CANCEL_ACTION],
           },
         ]}
       />

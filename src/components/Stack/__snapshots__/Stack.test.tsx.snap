@@ -3,35 +3,35 @@
 exports[`<Stack /> should render as expected 1`] = `
 <div>
   <div
-    class="css-1lxwves"
+    class="css-0"
   >
-    <div
-      class="css-0"
+    <li
+      class="css-1lxwves"
     >
       <p
         class="css-fzcsno"
       >
         Test One
       </p>
-    </div>
-    <div
-      class="css-8kn4zf"
+    </li>
+    <li
+      class="css-kuxuyf"
     >
       <p
         class="css-fzcsno"
       >
         Test Two
       </p>
-    </div>
-    <div
-      class="css-8kn4zf"
+    </li>
+    <li
+      class="css-kuxuyf"
     >
       <p
         class="css-fzcsno"
       >
         Test Three
       </p>
-    </div>
+    </li>
   </div>
 </div>
 `;

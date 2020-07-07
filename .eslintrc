@@ -1,72 +1,25 @@
 {
-  "extends": [
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "airbnb-typescript",
-    "airbnb/hooks",
-    "prettier/@typescript-eslint",
-    "plugin:prettier/recommended",
-    "adjunct"
-  ],
-  "parserOptions": {
-    "project": "./tsconfig.json"
+  "root": true,
+  "extends": ["@smartpension/eslint-config"],
+  "env": {
+    "browser": true,
+    "jest": true,
+    "node": true
   },
+  "settings": {
+    "babel": true,
+    "compat": true
+  },
+  "ignorePatterns": ["/dist"],
   "overrides": [
-    {
-      "files": ["*.js"],
-      "rules": {
-        "@typescript-eslint/no-var-requires": 0
-      }
-    },
     {
       "files": ["*.stories.tsx", "*.test.tsx"],
       "rules": {
         "@typescript-eslint/no-unsafe-call": 0,
         "@typescript-eslint/no-unsafe-member-access": 0,
         "@typescript-eslint/no-unsafe-assignment": 0,
-        "sonarjs/no-duplicate-string": 0
-      }
-    },
-    {
-      "files": ["*.test.tsx"],
-      "rules": {
-        "promise/catch-or-return": 0,
-        "@typescript-eslint/no-floating-promises": 0,
-        "jest/valid-expect-in-promise": 0
+        "@typescript-eslint/no-unsafe-return": 0
       }
     }
-  ],
-  "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "semi": false,
-        "trailingComma": "es5",
-        "singleQuote": true,
-        "printWidth": 120,
-        "tabWidth": 2,
-        "arrowParens": "avoid"
-      }
-    ],
-    "unicorn/filename-case": 0,
-    "unicorn/prevent-abbreviations": 0,
-    "react/prop-types": 0,
-    "react/jsx-props-no-spreading": 0,
-    "import/prefer-default-export": 0,
-    "@typescript-eslint/no-unsafe-return": 0,
-    "@typescript-eslint/ban-types": 0,
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": [
-          "**/*.test.tsx",
-          "**/*.stories.tsx",
-          "testing/**",
-          "storybook/**",
-          "src/utils/withThemeProvider/**",
-          "src/utils/createStory/**"
-        ]
-      }
-    ]
-  }
+  ]
 }
