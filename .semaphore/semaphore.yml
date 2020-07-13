@@ -1,5 +1,5 @@
 version: v1.0
-name: Test Bright Storybook
+name: Bright Storybook
 agent:
   machine:
     type: e1-standard-2
@@ -18,4 +18,5 @@ blocks:
             - yarn install
             - cache store
             - yarn build --if-present
+            - yarn lint
             - yarn test
