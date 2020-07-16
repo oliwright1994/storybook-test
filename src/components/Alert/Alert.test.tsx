@@ -1,8 +1,8 @@
 import { Text } from '@chakra-ui/core'
 import { screen } from '@testing-library/react'
 import React from 'react'
+import { renderWithBrightTheme } from 'testing/helpers/themeHelper'
 
-import { renderWithBrightTheme } from '../../../testing/helpers/themeHelper'
 import Alert from '.'
 
 describe('<Alert />', () => {

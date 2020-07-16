@@ -1,7 +1,7 @@
+import { HorizontalAlignment, Space } from '@bright/constants'
 import { Box, Flex } from '@chakra-ui/core'
 import React, { FC } from 'react'
 
-import { HorizontalAlignment, Space } from '../../constants'
 import { StackElement, StackItemElement } from './constants'
 
 interface IStack {

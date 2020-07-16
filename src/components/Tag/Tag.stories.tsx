@@ -1,8 +1,8 @@
+import { MessageType } from '@bright/constants'
+import createStory from '@bright/storybook/createStory'
 import { select } from '@storybook/addon-knobs'
 import React from 'react'
 
-import { MessageType } from '../../constants'
-import createStory from '../../storybook/createStory'
 import Tag from '.'
 
 createStory(

@@ -1,9 +1,9 @@
+import { HorizontalAlignment, Space } from '@bright/constants'
+import createStory from '@bright/storybook/createStory'
 import { Text } from '@chakra-ui/core'
 import { boolean, select } from '@storybook/addon-knobs'
 import React from 'react'
 
-import { HorizontalAlignment, Space } from '../../constants'
-import createStory from '../../storybook/createStory'
 import Stack from './Stack'
 
 createStory('COMPONENTS | Stack', [

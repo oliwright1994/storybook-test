@@ -1,3 +1,5 @@
+import Stack from '@bright/components/Stack'
+import { Space } from '@bright/constants'
 import {
   FormControl,
   FormErrorMessage,
@@ -7,9 +9,6 @@ import {
   Input as ChakraInput,
 } from '@chakra-ui/core'
 import React, { FC, FormEvent } from 'react'
-
-import { Space } from '../../constants'
-import Stack from '../Stack'
 
 export interface IInput
   extends Pick<

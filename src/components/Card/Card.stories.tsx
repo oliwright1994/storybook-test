@@ -1,9 +1,9 @@
+import Tag from '@bright/components/Tag'
+import { MessageType } from '@bright/constants'
+import createStory from '@bright/storybook/createStory'
 import { Text } from '@chakra-ui/core'
 import React from 'react'
 
-import { MessageType } from '../../constants'
-import createStory from '../../storybook/createStory'
-import Tag from '../Tag'
 import Card from './Card'
 
 createStory('COMPONENTS | Card', [

@@ -1,7 +1,7 @@
+import { MessageType } from '@bright/constants'
 import { render } from '@testing-library/react'
 import React from 'react'
 
-import { MessageType } from '../../constants'
 import Tag from '.'
 
 describe('<Tag />', () => {

@@ -1,11 +1,10 @@
 /* istanbul ignore file */
+import GlobalStyles from '@bright/style/GlobalStyles'
+import mergeTheme from '@bright/theme/mergeTheme'
 import { CSSReset, ThemeProvider as ChakraThemeProvider } from '@chakra-ui/core'
 import React, { FC } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { Theme } from 'styled-system'
-
-import GlobalStyles from '../../style/GlobalStyles'
-import mergeTheme from '../../theme/mergeTheme'
 
 interface IBrightProvider {
   theme: Theme

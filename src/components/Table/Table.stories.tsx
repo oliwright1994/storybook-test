@@ -1,10 +1,10 @@
+import Tag from '@bright/components/Tag'
+import { MessageType } from '@bright/constants'
+import createStory from '@bright/storybook/createStory'
 import { Button } from '@chakra-ui/core'
 import React, { ReactNode } from 'react'
 import { CellProps } from 'react-table'
 
-import { MessageType } from '../../constants'
-import createStory from '../../storybook/createStory'
-import Tag from '../Tag'
 import Table from '.'
 
 const CANCEL_ACTION = 'Cancel transaction'

@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import React from 'react'
 import { setOptions, withLiveEditScope } from 'storybook-addon-react-live-edit'
 
-import withThemeProvider from '../withStorybookProviders'
+import withThemeProvider from '@bright/storybook/withStorybookProviders'
 import { Story, StoryOptions } from './createStory.d'
 
 setOptions({ presets: ['react'] })

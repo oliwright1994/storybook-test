@@ -1,7 +1,6 @@
+import { Space } from '@bright/constants'
 import { Box } from '@chakra-ui/core'
 import React, { FC } from 'react'
-
-import { Space } from '../../constants'
 
 const Card: FC = ({ children }) => {
   return (

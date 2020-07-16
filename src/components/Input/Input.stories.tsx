@@ -1,8 +1,8 @@
+import createStory from '@bright/storybook/createStory'
 import { Stack } from '@chakra-ui/core'
 import { boolean } from '@storybook/addon-knobs'
 import React from 'react'
 
-import createStory from '../../storybook/createStory'
 import Input from '.'
 
 createStory(

@@ -1,7 +1,6 @@
+import { AlertVariant } from '@bright/constants'
 import { Alert as ChakraAlert, AlertIcon as ChakraAlertIcon } from '@chakra-ui/core'
 import React, { FC } from 'react'
-
-import { AlertVariant } from '../../constants'
 
 interface IAlert {
   variant?: AlertVariant

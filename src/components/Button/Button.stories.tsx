@@ -1,7 +1,7 @@
+import createStory from '@bright/storybook/createStory'
 import { boolean, radios, select } from '@storybook/addon-knobs'
 import React from 'react'
 
-import createStory from '../../storybook/createStory'
 import Button from '.'
 import { ButtonSize, ButtonVariant } from './constants'
 
