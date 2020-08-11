@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> should render as expected 1`] = `
+<div>
+  <p
+    class="css-fzcsno"
+  >
+    Test One
+  </p>
+  <p
+    class="css-fzcsno"
+  >
+    Test Two
+  </p>
+  <p
+    class="css-fzcsno"
+  >
+    Test Three
+  </p>
+</div>
+`;
+
+exports[`<Text /> should render with the correct element tag 1`] = `
+<div>
+  <p
+    class="css-fzcsno"
+  >
+    Paragraph
+  </p>
+  <i
+    class="css-fzcsno"
+  >
+    Italic
+  </i>
+  <strong
+    class="css-fzcsno"
+  >
+    Strong
+  </strong>
+  <span
+    class="css-fzcsno"
+  >
+    Span
+  </span>
+</div>
+`;
