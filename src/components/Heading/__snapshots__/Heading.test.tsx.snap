@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Heading /> should render as expected 1`] = `
+<div>
+  <h1
+    class="css-p5x3r9"
+  >
+    Heading One
+  </h1>
+  <h2
+    class="css-p5x3r9"
+  >
+    Heading Two
+  </h2>
+</div>
+`;
+
+exports[`<Heading /> should render with the correct element tag 1`] = `
+<div>
+  <h1
+    class="css-p5x3r9"
+  >
+    H1 Heading
+  </h1>
+  <h2
+    class="css-p5x3r9"
+  >
+    H2 Heading
+  </h2>
+  <h3
+    class="css-p5x3r9"
+  >
+    H3 Heading
+  </h3>
+  <h4
+    class="css-p5x3r9"
+  >
+    H4 Heading
+  </h4>
+  <h5
+    class="css-p5x3r9"
+  >
+    H5 Heading
+  </h5>
+  <h6
+    class="css-p5x3r9"
+  >
+    H6 Heading
+  </h6>
+</div>
+`;
