@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox /> should render as expected 1`] = `
+<div>
+  <div
+    class="css-0"
+    role="group"
+  >
+    <div
+      class="css-0"
+    >
+      <li
+        class="css-1lxwves"
+      >
+        <label
+          class="css-1j6qroy"
+        >
+          <input
+            class="css-1gy22ay"
+            id="testCheckbox"
+            type="checkbox"
+            value=""
+          />
+          <div
+            aria-hidden="true"
+            class="css-nlndso"
+          >
+            <svg
+              class="css-1vhqk79"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 14 14"
+            >
+              <g
+                fill="currentColor"
+              >
+                <polygon
+                  points="5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="css-6qsuox"
+          >
+            <label
+              class="css-hny2kg"
+              for="testCheckbox"
+            >
+              This is a label
+            </label>
+            <p
+              class="css-1kvhzt2"
+            >
+              This is a description
+            </p>
+          </div>
+        </label>
+      </li>
+      <li
+        class="css-qzdso"
+      />
+    </div>
+  </div>
+</div>
+`;
