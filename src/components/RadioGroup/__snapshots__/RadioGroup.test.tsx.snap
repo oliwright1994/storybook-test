@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioGroup /> should render as expected 1`] = `
+<div>
+  <div
+    class="css-0"
+    role="group"
+  >
+    <div
+      class="css-0"
+    >
+      <li
+        class="css-1lxwves"
+      >
+        <div
+          class="css-1y3jl3a"
+          role="radiogroup"
+        >
+          <div
+            class="css-1x9mqzb"
+          >
+            <label
+              class="css-jwmyb8"
+              for="1"
+            >
+              <input
+                class="css-1gy22ay"
+                id="1"
+                type="radio"
+                value="1"
+              />
+              <div
+                aria-hidden="true"
+                class="css-1e2c42x"
+                type="radio"
+              >
+                <span
+                  class="css-z7lnx4"
+                />
+              </div>
+              <div
+                class="css-6qsuox"
+              >
+                Option 1
+              </div>
+            </label>
+          </div>
+          <div
+            class="css-13o7eu2"
+          >
+            <label
+              class="css-jwmyb8"
+              for="2"
+            >
+              <input
+                class="css-1gy22ay"
+                id="2"
+                type="radio"
+                value="2"
+              />
+              <div
+                aria-hidden="true"
+                class="css-1e2c42x"
+                type="radio"
+              >
+                <span
+                  class="css-z7lnx4"
+                />
+              </div>
+              <div
+                class="css-6qsuox"
+              >
+                Option 2
+              </div>
+            </label>
+          </div>
+        </div>
+      </li>
+      <li
+        class="css-qzdso"
+      >
+        <p
+          class="css-1kvhzt2"
+        >
+          This is a description
+        </p>
+      </li>
+      <li
+        class="css-qzdso"
+      />
+    </div>
+  </div>
+</div>
+`;

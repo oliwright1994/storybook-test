@@ -5,5 +5,6 @@ export { default as Stack } from './Stack'
 export { default as Alert } from './Alert'
 export { default as Text } from './Text'
 export { default as Heading } from './Heading'
+export { default as RadioGroup } from './RadioGroup'
 
 export * as PATCH from '@chakra-ui/core'

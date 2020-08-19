@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Radio /> should render as expected 1`] = `
+<div>
+  <label
+    class="css-jwmyb8"
+    for="testRadioId"
+  >
+    <input
+      class="css-1gy22ay"
+      id="testRadioId"
+      type="radio"
+      value="testRadioValue"
+    />
+    <div
+      aria-hidden="true"
+      class="css-1e2c42x"
+      type="radio"
+    >
+      <span
+        class="css-z7lnx4"
+      />
+    </div>
+    <div
+      class="css-6qsuox"
+    >
+      Radio Button text
+    </div>
+  </label>
+</div>
+`;
