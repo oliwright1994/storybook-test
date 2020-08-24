@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tooltip /> should render as expected 1`] = `
+<div>
+  <span
+    class="css-0"
+    tabindex="0"
+  >
+    Test Text
+  </span>
+</div>
+`;
