@@ -1,5 +1,4 @@
 /* istanbul ignore file */
-import GlobalStyles from '@bright/style/GlobalStyles'
 import { CSSReset } from '@chakra-ui/core'
 import React, { FC } from 'react'
 import { Theme } from 'styled-system'
@@ -14,7 +13,6 @@ const BrightProvider: FC<IBrightProvider> = ({ children, theme }) => {
   return (
     <ThemeProvider theme={theme}>
       <CSSReset />
-      <GlobalStyles />
       {children}
     </ThemeProvider>
   )

@@ -1,5 +1,4 @@
 export * from './components'
 export * from './providers'
 export * from './constants'
-export * from './style'
 export * from './theme'
