@@ -1,4 +1,3 @@
-import { Stack } from '@bright/components'
 import createStory from '@bright/storybook/createStory'
 import { select } from '@storybook/addon-knobs'
 import React from 'react'
@@ -15,11 +14,7 @@ createStory('COMPONENTS | Spinner', [
       const color = 'blue.500'
       const size = select('Size', { xl: 'xl', lg: 'lg', md: 'md', sm: 'sm', xs: 'xs' }, 'lg')
 
-      return (
-        <Stack>
-          <Spinner size={size} speed={speed} color={color} emptyColor={emptyColor} thickness={thickness} />
-        </Stack>
-      )
+      return <Spinner size={size} speed={speed} color={color} emptyColor={emptyColor} thickness={thickness} />
     },
   },
 ])
