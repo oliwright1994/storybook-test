@@ -1,4 +1,3 @@
-import { Stack } from '@bright/components'
 import createStory from '@bright/storybook/createStory'
 import { boolean } from '@storybook/addon-knobs'
 import React from 'react'
@@ -15,11 +14,9 @@ createStory('COMPONENTS | Link', [
       const isExternal = boolean('External', false)
 
       return (
-        <Stack>
-          <Link href={isExternal ? externalLink : internalLink} isDisabled={isDisabled} isExternal={isExternal}>
-            {`${isExternal ? 'External' : 'Internal'} ${isDisabled ? 'disabled' : ''} link`}
-          </Link>
-        </Stack>
+        <Link href={isExternal ? externalLink : internalLink} isDisabled={isDisabled} isExternal={isExternal}>
+          {`${isExternal ? 'External' : 'Internal'} ${isDisabled ? 'disabled' : ''} link`}
+        </Link>
       )
     },
   },
