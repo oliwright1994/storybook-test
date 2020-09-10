@@ -22,4 +22,26 @@ describe('<Button />', () => {
     fireEvent.click(getByText(/click/i))
     expect(clickHandler).toHaveBeenCalled()
   })
+
+  it('is disabled when isDisabled is passed', () => {
+    const { getByText } = renderWithBrightTheme(
+      <Button onClick={clickHandler} isDisabled>
+        Click me
+      </Button>
+    )
+
+    expect(getByText(/click/i)).toBeDisabled()
+  })
+
+  it('displays icons', () => {
+    const { getAllByRole } = renderWithBrightTheme(
+      <Button onClick={clickHandler} leftIcon="email" rightIcon="search">
+        Click me
+      </Button>
+    )
+
+    const icons = getAllByRole('presentation', { hidden: true })
+    expect(icons).toHaveLength(2)
+    icons.forEach(el => expect(el).toHaveAttribute('focusable', 'false'))
+  })
 })

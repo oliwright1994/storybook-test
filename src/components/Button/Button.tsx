@@ -15,8 +15,23 @@ const variantMap: Record<string, string> = {
   [ButtonVariant.danger]: 'red',
 }
 
-const Button: FC<IButton> = ({ onClick, variant = ButtonVariant.primary, size = ButtonSize.lg, children }) => (
-  <ChakraButton onClick={onClick} variantColor={variantMap[variant || ButtonVariant.primary]} size={size}>
+const Button: FC<IButton> = ({
+  onClick,
+  variant = ButtonVariant.primary,
+  size = ButtonSize.lg,
+  isDisabled,
+  leftIcon,
+  rightIcon,
+  children,
+}) => (
+  <ChakraButton
+    onClick={onClick}
+    variantColor={variantMap[variant || ButtonVariant.primary]}
+    size={size}
+    isDisabled={isDisabled}
+    leftIcon={leftIcon}
+    rightIcon={rightIcon}
+  >
     {children}
   </ChakraButton>
 )
