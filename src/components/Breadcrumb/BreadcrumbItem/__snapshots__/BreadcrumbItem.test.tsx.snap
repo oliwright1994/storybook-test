@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BreadcrumbItem /> should render as expected 1`] = `
+<div>
+  <li
+    class="css-18biwo"
+  >
+    <a
+      class="css-u5zpo1"
+      href="/home"
+    >
+      Link Text
+    </a>
+    <span
+      class="css-1ho43uv"
+      role="presentation"
+    >
+      /
+    </span>
+  </li>
+</div>
+`;
