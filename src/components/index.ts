@@ -10,6 +10,7 @@ export { default as Checkbox } from './Checkbox'
 export { default as Tooltip } from './Tooltip'
 export { default as Link } from './Link'
 export { default as RadioGroup } from './RadioGroup'
-export { default as BreadCrumb } from './Breadcrumb'
+export { default as Modal } from './Modal'
+export { default as Breadcrumb } from './Breadcrumb'
 
 export * as PATCH from '@chakra-ui/core'

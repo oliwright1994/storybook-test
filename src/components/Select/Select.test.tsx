@@ -7,7 +7,7 @@ import Select from '.'
 describe('<Select />', () => {
   const defaultOptions = ['first', 'second']
   const defaultId = 'testSelect'
-  const generateDefaultOptions = (): JSX.Element[] => defaultOptions.map(value => <option>{value}</option>)
+  const generateDefaultOptions = (): JSX.Element[] => defaultOptions.map(value => <option key={value}>{value}</option>)
   const label = 'This is label'
   const description = 'This is label'
   const errorMessage = 'This is error message'

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Body /> should render as expected 1`] = `
+<div>
+  <div
+    class="css-5m10fw"
+  >
+    Test Text
+  </div>
+</div>
+`;
