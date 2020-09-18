@@ -1,10 +1,12 @@
-import { Button, Input, Text } from '@bright/components'
 import createStory from '@bright/storybook/createStory'
 import { Box } from '@chakra-ui/core'
 import { boolean, CHANGE, text } from '@storybook/addon-knobs'
 import { addons } from '@storybook/addons'
 import React from 'react'
 
+import Button from '../Button'
+import Input from '../Input'
+import Text from '../Text'
 import Modal from '.'
 
 createStory('COMPONENTS | Modal', [
