@@ -13,6 +13,7 @@ createStory('COMPONENTS | RadioGroup', [
       const isInline = boolean('Inline', false)
       const isRequired = boolean('Required', false)
       const isInvalid = boolean('Invalid', false)
+      const label = text('Label', 'Radio group')
       if (isInvalid) {
         errorMessage = text('Error Message', 'There has been an error')
       }
@@ -24,6 +25,8 @@ createStory('COMPONENTS | RadioGroup', [
           description={description}
           isRequired={isRequired}
           isInline={isInline}
+          label={label}
+          isInvalid={isInvalid}
         >
           <RadioGroup.Radio id="1" value="1">
             Value 1

@@ -5,6 +5,7 @@ import {
   FormControl,
   FormErrorMessage,
   FormHelperText,
+  FormLabel,
   IRadioGroup as ChakraIRadioGroup,
   RadioGroup as ChakraRadioGroup,
 } from '@chakra-ui/core'
@@ -17,6 +18,7 @@ interface IRadioGroupProps extends Pick<ChakraIRadioGroup, 'onChange' | 'value'>
   isRequired?: boolean
   isInline?: boolean
   isInvalid?: boolean
+  label?: string
 }
 
 interface IRadioGroup extends FC<IRadioGroupProps> {
@@ -33,10 +35,17 @@ const RadioGroup: IRadioGroup = ({
   isInline,
   value,
   errorMessage,
+  label,
 }) => {
   return (
-    <FormControl isInvalid={isInvalid} isRequired={isRequired}>
+    <FormControl isInvalid={isInvalid} isRequired={isRequired} as="fieldset">
       <Stack space={Space.xxs}>
+        {label && (
+          <FormLabel padding={0} as="legend">
+            {label}
+          </FormLabel>
+        )}
+        {description && <FormHelperText margin={0}>{description}</FormHelperText>}
         <ChakraRadioGroup
           value={value}
           onChange={onChange}
@@ -46,7 +55,6 @@ const RadioGroup: IRadioGroup = ({
         >
           {children}
         </ChakraRadioGroup>
-        {description && <FormHelperText margin={0}>{description}</FormHelperText>}
         {errorMessage && <FormErrorMessage>{errorMessage}</FormErrorMessage>}
       </Stack>
     </FormControl>

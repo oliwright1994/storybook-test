@@ -2,7 +2,7 @@
 
 exports[`<RadioGroup /> should render as expected 1`] = `
 <div>
-  <div
+  <fieldset
     class="css-0"
     role="group"
   >
@@ -11,6 +11,18 @@ exports[`<RadioGroup /> should render as expected 1`] = `
     >
       <li
         class="css-1lxwves"
+      />
+      <li
+        class="css-qzdso"
+      >
+        <p
+          class="css-1kvhzt2"
+        >
+          This is a description
+        </p>
+      </li>
+      <li
+        class="css-qzdso"
       >
         <div
           class="css-1y3jl3a"
@@ -78,17 +90,8 @@ exports[`<RadioGroup /> should render as expected 1`] = `
       </li>
       <li
         class="css-qzdso"
-      >
-        <p
-          class="css-1kvhzt2"
-        >
-          This is a description
-        </p>
-      </li>
-      <li
-        class="css-qzdso"
       />
     </div>
-  </div>
+  </fieldset>
 </div>
 `;
