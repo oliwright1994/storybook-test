@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TabList /> should render as expected 1`] = `
+<div>
+  <div
+    class="css-0"
+  >
+    <div
+      aria-orientation="horizontal"
+      class="css-1dxxh68"
+      role="tablist"
+    >
+      <button
+        aria-controls="panel:1-0"
+        aria-selected="true"
+        class="css-1kt89oh"
+        id="tab:1-0"
+        role="tab"
+        tabindex="0"
+        type="button"
+      >
+        Tab1
+      </button>
+      <button
+        aria-controls="panel:1-1"
+        aria-selected="false"
+        class="css-1kt89oh"
+        id="tab:1-1"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        Tab2
+      </button>
+    </div>
+  </div>
+</div>
+`;

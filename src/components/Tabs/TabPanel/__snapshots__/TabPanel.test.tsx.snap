@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TabPanel /> should render as expected 1`] = `
+<div>
+  <div
+    class="css-0"
+  >
+    <div
+      class="css-0"
+      tabindex="-1"
+    >
+      <div
+        aria-labelledby="tab:undefined"
+        class="css-1jj07fx"
+        id="panel:undefined"
+        role="tabpanel"
+        tabindex="-1"
+      >
+        panel text
+      </div>
+    </div>
+  </div>
+</div>
+`;
