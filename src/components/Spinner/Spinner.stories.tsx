@@ -8,13 +8,9 @@ createStory('COMPONENTS | Spinner', [
   {
     label: 'standard',
     jsx: () => {
-      const thickness = '3px'
-      const speed = '0.8s'
-      const emptyColor = 'gray.200'
-      const color = 'blue.500'
-      const size = select('Size', { xl: 'xl', lg: 'lg', md: 'md', sm: 'sm', xs: 'xs' }, 'lg')
+      const size = select('Size', ['xl', 'lg', 'md', 'sm', 'xs'], 'lg')
 
-      return <Spinner size={size} speed={speed} color={color} emptyColor={emptyColor} thickness={thickness} />
+      return <Spinner size={size} />
     },
   },
 ])
