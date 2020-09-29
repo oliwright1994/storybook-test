@@ -5,16 +5,12 @@ import React from 'react'
 
 import Tag from '.'
 
-createStory(
-  'COMPONENTS | Tag',
-  [
-    {
-      label: 'standard',
-      jsx: () => {
-        const messageType = select('messageType', MessageType, MessageType.success, 'messageType')
-        return <Tag messageType={messageType}>{messageType}</Tag>
-      },
+createStory('COMPONENTS | Tag', [
+  {
+    label: 'standard',
+    jsx: () => {
+      const messageType = select('messageType', MessageType, MessageType.success, 'messageType')
+      return <Tag messageType={messageType}>{messageType}</Tag>
     },
-  ],
-  { liveEdit: { Component: Tag, render: 'return <Tag messageType="info">hi</Tag>' } }
-)
+  },
+])
