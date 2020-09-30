@@ -122,7 +122,6 @@
     "@testing-library/jest-dom": "^5.9.0",
     "@testing-library/react": "^10.2.1",
     "emotion-theming": "^10.0.27",
-    "limax": "^2.0.0",
     "react-table": "^7.2.1"
   },
   "husky": {
