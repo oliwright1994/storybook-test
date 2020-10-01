@@ -1,4 +1,3 @@
-import { withInfo } from '@storybook/addon-info'
 import { storiesOf } from '@storybook/react'
 
 import withThemeProvider from '@bright/storybook/withStorybookProviders'
@@ -14,6 +13,6 @@ export default function createStory(
     .addDecorator(withThemeProvider())
 
   stories.forEach((story: Story): void => {
-    _stories.add(story.label, withInfo({ inline: false, header: false })(story.jsx))
+    _stories.add(story.label, story.jsx)
   })
 }
