@@ -9,8 +9,6 @@ export default function createStory(
   { tests = [], readme = '', changes = '' }: StoryOptions = {}
 ): void {
   const _stories = storiesOf(name, module)
-    // @ts-ignore
-    .addDecorator(withThemeProvider())
 
   stories.forEach((story: Story): void => {
     _stories.add(story.label, story.jsx)

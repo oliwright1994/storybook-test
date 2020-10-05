@@ -1,16 +1,10 @@
-import createStory from '@bright/storybook/createStory'
-import { select } from '@storybook/addon-knobs'
+import { SpinnerProps } from '@chakra-ui/core'
+import { Meta } from '@storybook/react/types-6-0'
 import React from 'react'
 
 import Spinner from '.'
 
-createStory('COMPONENTS | Spinner', [
-  {
-    label: 'standard',
-    jsx: () => {
-      const size = select('Size', ['xl', 'lg', 'md', 'sm', 'xs'], 'lg')
+export default { component: Spinner, title: 'COMPONENTS / Spinner' } as Meta
 
-      return <Spinner size={size} />
-    },
-  },
-])
+export const Standard = (args: SpinnerProps): JSX.Element => <Spinner {...args} />
+Standard.args = { size: 'md' }
