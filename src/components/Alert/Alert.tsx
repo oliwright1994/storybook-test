@@ -1,12 +1,11 @@
-import { AlertVariant } from '@bright/constants'
 import { Alert as ChakraAlert, AlertIcon as ChakraAlertIcon } from '@chakra-ui/core'
 import React, { FC } from 'react'
 
-interface IAlert {
-  variant?: AlertVariant
+export interface IAlert {
+  variant?: 'error' | 'success' | 'warning' | 'info'
 }
 
-const Alert: FC<IAlert> = ({ children, variant = AlertVariant.info }) => (
+const Alert: FC<IAlert> = ({ children, variant = 'info' }) => (
   <ChakraAlert status={variant}>
     <ChakraAlertIcon />
     {children}
