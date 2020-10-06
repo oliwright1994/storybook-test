@@ -1,30 +1,16 @@
-import createStory from '@bright/storybook/createStory'
-import { boolean, radios, select } from '@storybook/addon-knobs'
+import { Meta } from '@storybook/react/types-6-0'
 import React from 'react'
 
-import Button from '.'
-import { ButtonSize, ButtonVariant } from './constants'
+import Button, { IButton } from './Button'
 
-createStory('COMPONENTS | Button', [
-  {
-    label: 'standard',
-    jsx: () => {
-      const variant = select('Variant', ButtonVariant, ButtonVariant.primary)
-      const size = select('Size', ButtonSize, ButtonSize.lg)
-      const disabled = boolean('Disabled', false)
-      const icon = radios('Icon', { none: 'no', left: 'left', right: 'right' }, 'no')
-      return (
-        <Button
-          onClick={() => {}}
-          variant={variant}
-          size={size}
-          isDisabled={disabled}
-          leftIcon={icon === 'left' ? 'email' : undefined}
-          rightIcon={icon === 'right' ? 'email' : undefined}
-        >
-          I am a {variant} {size.toUpperCase()} button with {icon} icon
-        </Button>
-      )
-    },
-  },
-])
+export default { component: Button, title: 'COMPONENTS / Button' } as Meta
+
+export const Standard = (args: IButton): JSX.Element => <Button {...args} />
+Standard.args = {
+  children: 'email button',
+  variant: 'primary',
+  size: 'md',
+  isDisabled: false,
+  leftIcon: 'email',
+  rightIcon: '',
+}
