@@ -933,7 +933,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/standalone@^7.0.0", "@babel/standalone@^7.4.5":
+"@babel/standalone@^7.4.5":
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/standalone/-/standalone-7.10.4.tgz#63b9e211bee42e8ba8dfc1c0b68a856150e37bf2"
   integrity sha512-Cgnx+Z7dYqQrz42GPGzDFTph8n15NogWuR9OpocOVlRZQoRw4q+OmudevYAd6CjOVjGu6PgvJwojxCE34cfXPg==
@@ -4560,11 +4560,6 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
   integrity sha1-DQcLTQQ6W+ozovGkDi7bPZpMz3c=
-
-codemirror@^5.40.0:
-  version "5.55.0"
-  resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.55.0.tgz#23731f641288f202a6858fdc878f3149e0e04363"
-  integrity sha512-TumikSANlwiGkdF/Blnu/rqovZ0Y3Jh8yy9TqrPbSM0xxSucq3RgnpVDQ+mD9q6JERJEIT2FMuF/fBGfkhIR/g==
 
 collapse-white-space@^1.0.2:
   version "1.0.6"
@@ -12792,14 +12787,6 @@ store2@^2.7.1:
   version "2.11.2"
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.11.2.tgz#a298e5e97b21b3ce7419b732540bc7c79cb007db"
   integrity sha512-TQMKs+C6n9idtzLpxluikmDCYiDJrTbbIGn9LFxMg0BVTu+8JZKSlXTWYRpOFKlfKD5HlDWLVpJJyNGZ2e9l1A==
-
-storybook-addon-react-live-edit@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/storybook-addon-react-live-edit/-/storybook-addon-react-live-edit-2.0.4.tgz#6e195894f26c4e2ac6bc2235e359913d07cd2cb1"
-  integrity sha512-VcLMipZD75euQn5t38VLPmttutdLgoTuWaz8nson4G1gdg2uHnC/B7Mq0ZXsldduxZBcMmEuSAydayfabNgkeQ==
-  dependencies:
-    "@babel/standalone" "^7.0.0"
-    codemirror "^5.40.0"
 
 storybook-addon-styled-component-theme@^1.3.0:
   version "1.3.0"
