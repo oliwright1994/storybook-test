@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/core'
 import React, { FC } from 'react'
 
-interface ICheckbox
+export interface ICheckbox
   extends Pick<ChakraICheckbox, 'isDisabled' | 'isInvalid' | 'isChecked' | 'isReadOnly' | 'onChange'> {
   id: string
   value: string | number
