@@ -1,21 +1,15 @@
-import createStory from '@bright/storybook/createStory'
+import { Meta } from '@storybook/react/types-6-0'
 import React from 'react'
 
 import Stack from '../Stack'
-import Text from './Text'
+import Text, { IText } from './Text'
 
-createStory('COMPONENTS | Text', [
-  {
-    label: 'Text',
-    jsx: () => {
-      return (
-        <Stack>
-          <Text>Paragraph</Text>
-          <Text as="i">Italic</Text>
-          <Text as="span">Span</Text>
-          <Text as="strong">Strong</Text>
-        </Stack>
-      )
-    },
-  },
-])
+export default { component: Text, title: 'Text' } as Meta
+export const Standard = (args: IText): JSX.Element => (
+  <Stack>
+    <Text {...args}>Text</Text>
+  </Stack>
+)
+Standard.args = {
+  as: 'p',
+}

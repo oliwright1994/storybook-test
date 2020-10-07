@@ -1,7 +1,7 @@
 import { Text as ChakraText } from '@chakra-ui/core'
 import React, { FC } from 'react'
 
-interface IText {
+export interface IText {
   as?: 'p' | 'span' | 'strong' | 'i'
 }
 
