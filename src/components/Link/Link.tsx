@@ -1,7 +1,7 @@
 import { Link as ChakraLink, LinkProps as IChakraLink } from '@chakra-ui/core'
 import React, { FC } from 'react'
 
-interface ILink extends Pick<IChakraLink, 'isExternal' | 'isDisabled' | 'onClick' | 'as'> {
+export interface ILink extends Pick<IChakraLink, 'isExternal' | 'isDisabled' | 'onClick' | 'as'> {
   href?: string
 }
 
