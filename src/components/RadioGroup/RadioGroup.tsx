@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/core'
 import React, { FC } from 'react'
 
-interface IRadioGroupProps extends Pick<ChakraIRadioGroup, 'onChange' | 'value'> {
+export interface IRadioGroupProps extends Pick<ChakraIRadioGroup, 'onChange' | 'value'> {
   errorMessage?: string
   description?: string
   defaultValue?: string | number
