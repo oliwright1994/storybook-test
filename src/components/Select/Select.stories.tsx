@@ -1,42 +1,25 @@
-import createStory from '@bright/storybook/createStory'
-import { boolean } from '@storybook/addon-knobs'
+import { Meta } from '@storybook/react/types-6-0'
 import React from 'react'
 
-import Select from '.'
+import Select, { SelectProps } from './Select'
 
-createStory('COMPONENTS | Select', [
-  {
-    label: 'standard',
-    jsx: () => {
-      const knobsGroups = ['Display', 'Elements']
-      const isDisabled = boolean('Disabled', false, knobsGroups[0])
-      const isInvalid = boolean('Invalid', false, knobsGroups[0])
-      const isRequired = boolean('Required', false, knobsGroups[0])
-      const isReadonly = boolean('Readonly', false, knobsGroups[0])
-      const withLabel = boolean('With label', true, knobsGroups[1])
-      const withDescription = boolean('With description', true, knobsGroups[1])
-      const withErrorMessage = boolean('With error message', true, knobsGroups[1])
-
-      return (
-        <Select
-          id="storybookSelect"
-          label={withLabel ? 'Storybook select:' : ''}
-          description={withDescription ? 'This is select description' : ''}
-          errorMessage={withErrorMessage ? 'This is error message' : ''}
-          isDisabled={isDisabled}
-          isInvalid={isInvalid}
-          isRequired={isRequired}
-          isReadOnly={isReadonly}
-        >
-          <option value="first">First value</option>
-          <option value="second" selected>
-            Second value
-          </option>
-          <option value="third" disabled>
-            Third value
-          </option>
-        </Select>
-      )
-    },
-  },
-])
+export default { component: Select, title: 'Select' } as Meta
+export const Standard = (args: SelectProps): JSX.Element => (
+  <Select {...args}>
+    <option value="first">First value</option>
+    <option value="second">Second value</option>
+    <option value="third" disabled>
+      Third value
+    </option>
+  </Select>
+)
+Standard.args = {
+  id: 'storybookSelect',
+  label: 'Storybook select',
+  description: 'This is select description',
+  errorMessage: 'This is error message',
+  isDisabled: false,
+  isInvalid: false,
+  isRequired: false,
+  isReadOnly: false,
+}
