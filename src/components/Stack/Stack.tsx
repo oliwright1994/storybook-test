@@ -1,19 +1,16 @@
-import { HorizontalAlignment, Space } from '@bright/constants'
 import { Box, Flex } from '@chakra-ui/core'
 import React, { FC } from 'react'
 
-import { StackElement, StackItemElement } from './constants'
-
-interface IStack {
-  as?: StackElement
-  space?: Space
-  alignItems?: HorizontalAlignment
+export interface IStack {
+  as?: 'div' | 'ol' | 'ul'
+  space?: 'none' | 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl'
+  alignItems?: 'left' | 'center' | 'right'
   dividers?: boolean
 }
 interface IStackItem {
-  as: StackItemElement
-  space?: Space
-  alignItems: HorizontalAlignment
+  as: 'div' | 'ol' | 'ul' | 'li'
+  space?: 'none' | 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl'
+  alignItems: 'left' | 'center' | 'right'
 }
 
 const alignItemsMap = {
@@ -26,15 +23,9 @@ const StackItem: FC<IStackItem> = ({ alignItems, space, ...props }) => (
   <Flex direction="column" alignItems={alignItemsMap[alignItems]} mt={space} {...props} />
 )
 
-const Stack: FC<IStack> = ({
-  children,
-  as = StackElement.div,
-  space = Space.none,
-  alignItems = HorizontalAlignment.left,
-  dividers,
-}) => {
-  const isList = as === StackElement.ol || as === StackElement.ul
-  const stackItemElement = isList ? StackItemElement.div : StackItemElement.li
+const Stack: FC<IStack> = ({ children, as = 'div', space = 'none', alignItems = 'left', dividers }) => {
+  const isList = as === 'ol' || as === 'ul'
+  const stackItemElement = isList ? 'div' : 'li'
   const stackItemProps: IStackItem = {
     as: stackItemElement,
     alignItems,

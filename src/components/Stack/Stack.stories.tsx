@@ -1,26 +1,20 @@
-import { HorizontalAlignment, Space } from '@bright/constants'
-import createStory from '@bright/storybook/createStory'
 import { Text } from '@chakra-ui/core'
-import { boolean, select } from '@storybook/addon-knobs'
+import { Meta } from '@storybook/react/types-6-0'
 import React from 'react'
 
-import Stack from './Stack'
+import Stack, { IStack } from './Stack'
 
-createStory('COMPONENTS | Stack', [
-  {
-    label: 'Stack',
-    jsx: () => {
-      const space = select('Space', Space, Space.s)
-      const alignItems = select('Align', HorizontalAlignment, HorizontalAlignment.left)
-      const dividers = boolean('Dividers', true)
-
-      return (
-        <Stack space={space} alignItems={alignItems} dividers={dividers}>
-          <Text>Test one</Text>
-          <Text>Test two</Text>
-          <Text>Test Three</Text>
-        </Stack>
-      )
-    },
-  },
-])
+export default { component: Stack, title: 'Stack' } as Meta
+export const Standard = (args: IStack): JSX.Element => (
+  <Stack {...args}>
+    <Text>Test one</Text>
+    <Text>Test two</Text>
+    <Text>Test Three</Text>
+  </Stack>
+)
+Standard.args = {
+  as: 'div',
+  alignItems: 'left',
+  dividers: false,
+  space: 's',
+}
