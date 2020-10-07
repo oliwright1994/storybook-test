@@ -4,7 +4,7 @@ import React from 'react'
 
 import Spinner from '.'
 
-export default { component: Spinner, title: 'COMPONENTS / Spinner' } as Meta
+export default { component: Spinner, title: 'Spinner' } as Meta
 
 export const Standard = (args: SpinnerProps): JSX.Element => <Spinner {...args} />
 Standard.args = { size: 'md' }

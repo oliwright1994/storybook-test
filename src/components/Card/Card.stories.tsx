@@ -6,7 +6,7 @@ import React from 'react'
 
 import Card from './Card'
 
-export default { component: Card, title: 'COMPONENTS / Card' } as Meta
+export default { component: Card, title: 'Card' } as Meta
 export const Standard = (): JSX.Element => (
   <Card>
     <Text>This is Text component inside Card component</Text>
