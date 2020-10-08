@@ -29,6 +29,7 @@ const Button: FC<IButton> = ({
     isDisabled={isDisabled}
     leftIcon={leftIcon}
     rightIcon={rightIcon}
+    paddingLeft="100px"
   >
     {children}
   </ChakraButton>

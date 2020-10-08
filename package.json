@@ -24,9 +24,9 @@
     "@smartpension/eslint-config": "^0.2.0",
     "@storybook/addon-a11y": "^6.0.22",
     "@storybook/addon-actions": "^6.0.22",
+    "@storybook/addon-essentials": "^6.0.22",
     "@storybook/addon-info": "^5.3.21",
     "@storybook/addon-links": "^6.0.22",
-    "@storybook/addon-essentials": "^6.0.22",
     "@storybook/theming": "^6.0.22",
     "@types/jest": "^26.0.4",
     "@types/lodash.merge": "^4.6.6",
@@ -73,7 +73,8 @@
     "start": "yarn storybook",
     "test": "jest --config testing/config.js",
     "build-storybook": "build-storybook",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "chromatic": "npx chromatic --project-token b3j6cuw6kqk"
   },
   "dependencies": {
     "@chakra-ui/core": "^0.8.0",
@@ -83,6 +84,7 @@
     "@storybook/react": "^6.0.22",
     "@testing-library/jest-dom": "^5.9.0",
     "@testing-library/react": "^10.2.1",
+    "chromatic": "^5.2.0",
     "emotion-theming": "^10.0.27",
     "react-table": "^7.2.1"
   }
