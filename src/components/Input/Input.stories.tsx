@@ -1,11 +1,17 @@
 import { Stack } from '@chakra-ui/core'
 import { Meta } from '@storybook/react/types-6-0'
+import { withDesign } from 'storybook-addon-designs'
+
 import React from 'react'
 
 import Input, { IInput } from './Input'
 
-export default { component: Input, title: 'Input', parameters: {
+export default { component: Input, title: 'Input', decorators: [withDesign], parameters: {
   componentSubtitle: 'Used to collect information from the used',
+  design: {
+    type: 'figma',
+    url: 'https://www.figma.com/file/s1QI9G4WvO7Lm5bXuNviOv/DS_UX_Forms_0.3?node-id=4905%3A1061',
+  },
 }, } as Meta
 export const Standard = (args: IInput): JSX.Element => (
   <Stack>
