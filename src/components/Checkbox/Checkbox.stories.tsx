@@ -12,8 +12,6 @@ Standard.args = {
   isInvalid: false,
   isRequired: false,
   isReadOnly: false,
-  isChecked: false,
-  onChange: () => {},
   id: 'regulatory',
   value: 'regulatory_charge',
   errorMessage: 'You are not eligible for this charge configuration',
