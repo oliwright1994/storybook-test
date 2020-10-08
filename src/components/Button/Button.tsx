@@ -8,7 +8,7 @@ export interface IButton extends Pick<ButtonProps, 'leftIcon' | 'rightIcon' | 'i
 }
 
 const variantMap: Record<string, string> = {
-  primary: 'blue',
+  primary: 'green',
   secondary: 'gray',
   danger: 'red',
 }
@@ -29,7 +29,7 @@ const Button: FC<IButton> = ({
     isDisabled={isDisabled}
     leftIcon={leftIcon}
     rightIcon={rightIcon}
-    paddingLeft="100px"
+    padding="100px"
   >
     {children}
   </ChakraButton>
