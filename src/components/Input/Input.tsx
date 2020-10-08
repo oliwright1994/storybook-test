@@ -37,12 +37,7 @@ const Input: FC<IInput> = ({
   return (
     <FormControl isInvalid={isInvalid} isRequired={isRequired}>
       <Stack space={Space.xxs}>
-        {label && (
-          <FormLabel htmlFor={id} padding={0} verticalAlign="baseline">
-            {label}
-          </FormLabel>
-        )}
-        {description && <FormHelperText margin={0}>{description}</FormHelperText>}
+        {errorMessage && <FormErrorMessage>{errorMessage}</FormErrorMessage>}
         <ChakraInput
           {...props}
           id={id}
@@ -50,8 +45,13 @@ const Input: FC<IInput> = ({
           isFullWidth={isFullWidth}
           borderColor="gray.400"
           _hover={{ borderColor: 'gray.500' }}
-        />
-        {errorMessage && <FormErrorMessage>{errorMessage}</FormErrorMessage>}
+          />
+                      {label && (
+                        <FormLabel htmlFor={id} padding={0} verticalAlign="baseline">
+                          {label}
+                        </FormLabel>
+                      )}
+                      {description && <FormHelperText margin={0}>{description}</FormHelperText>}
       </Stack>
     </FormControl>
   )
