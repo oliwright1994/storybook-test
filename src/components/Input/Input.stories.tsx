@@ -4,7 +4,9 @@ import React from 'react'
 
 import Input, { IInput } from './Input'
 
-export default { component: Input, title: 'Input' } as Meta
+export default { component: Input, title: 'Input', parameters: {
+  componentSubtitle: 'Used to collect information from the used',
+}, } as Meta
 export const Standard = (args: IInput): JSX.Element => (
   <Stack>
     <Input {...args} />
