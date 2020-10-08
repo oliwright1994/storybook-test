@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/core'
 import React, { FC } from 'react'
 
-type IModalProps = Pick<IChakraModal, 'initialFocusRef' | 'returnFocusOnClose' | 'isOpen' | 'onClose'>
+export type IModalProps = Pick<IChakraModal, 'initialFocusRef' | 'returnFocusOnClose' | 'isOpen' | 'onClose'>
 
 interface IModal extends FC<IModalProps> {
   CloseButton: typeof CloseButton
