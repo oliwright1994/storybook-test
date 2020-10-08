@@ -1,16 +1,11 @@
-import { MessageType } from '@bright/constants'
-import createStory from '@bright/storybook/createStory'
-import { select } from '@storybook/addon-knobs'
+import { Meta } from '@storybook/react/types-6-0'
 import React from 'react'
 
 import Tag from '.'
+import { ITag } from './Tag.d'
 
-createStory('COMPONENTS | Tag', [
-  {
-    label: 'standard',
-    jsx: () => {
-      const messageType = select('messageType', MessageType, MessageType.success, 'messageType')
-      return <Tag messageType={messageType}>{messageType}</Tag>
-    },
-  },
-])
+export default { component: Tag, title: 'Tag' } as Meta
+export const Standard = (args: ITag): JSX.Element => <Tag {...args}>{args.messageType}</Tag>
+Standard.args = {
+  messageType: 'success',
+}
