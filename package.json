@@ -73,7 +73,8 @@
     "start": "yarn storybook",
     "test": "jest --config testing/config.js",
     "build-storybook": "build-storybook",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "chromatic": "npx chromatic --project-token b3j6cuw6kqk"
   },
   "dependencies": {
     "@chakra-ui/core": "^0.8.0",
