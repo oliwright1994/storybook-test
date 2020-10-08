@@ -26,7 +26,7 @@ export const inboxExample = (): JSX.Element => (
         accessor: 'tags',
         Cell: ({ row }: CellProps<Record<string, unknown>>) =>
           row.values.tags.map((tag: { type: MessageType; label: string }) => (
-            <span style={{ marginRight: 2 }}>
+            <span style={{ marginRight: 2 }} key={tag.label}>
               <Tag messageType={tag.type} key={tag.label}>
                 {tag.label}
               </Tag>
@@ -95,7 +95,13 @@ export const transitionHistoryExample = (): JSX.Element => (
         Header: '',
         accessor: 'actions',
         Cell: ({ row }: CellProps<Record<string, unknown>>) =>
-          row.values.actions.map((action: string): ReactNode => <Button height="auto">{action}</Button>),
+          row.values.actions.map(
+            (action: string): ReactNode => (
+              <Button height="auto" key={action}>
+                {action}
+              </Button>
+            )
+          ),
       },
     ]}
     data={[
