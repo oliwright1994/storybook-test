@@ -1,33 +1,33 @@
 import Text from '@bright/components/Text'
-import createStory from '@bright/storybook/createStory'
-import { Box, Icon } from '@chakra-ui/core'
-import { boolean, radios, text } from '@storybook/addon-knobs'
+import { Icon } from '@chakra-ui/core'
+import { Meta } from '@storybook/react/types-6-0'
 import React from 'react'
 
-import Tooltip from './Tooltip'
+import Tooltip, { ITooltip } from './Tooltip'
 
-createStory('COMPONENTS | Tooltip', [
-  {
-    label: 'Tooltip',
-    jsx: () => {
-      const tooltip = text('Tooltip', 'This is the tooltip text')
-      const ariaLabel = text('Aria Label', 'This is the aria-label')
-      const tooltipAnchor = radios('Tooltip Anchor', { Text: 'Text', Icon: 'Icon' }, 'Icon')
-      const shouldWrapChildren = boolean('Should Wrap Children (in <span>)', true)
-      const tooltipAnchorJSX = {
-        Text: 'Text Anchor',
-        Icon: <Icon color="gray.500" name="question-outline" />,
-      }
-      return (
-        <Box p="l">
-          <Text>
-            Hover or focus for tooltip: &nbsp;
-            <Tooltip label={tooltip} aria-label={ariaLabel} shouldWrapChildren={shouldWrapChildren}>
-              {tooltipAnchorJSX[tooltipAnchor]}
-            </Tooltip>
-          </Text>
-        </Box>
-      )
-    },
-  },
-])
+export default { component: Tooltip, title: 'Tooltip' } as Meta
+const props = {
+  label: 'This is the tooltip text',
+  areaLabel: 'This is the aria-label',
+  shouldWrapChildren: true,
+}
+export const Standard = (args: ITooltip): JSX.Element => (
+  <Text>
+    Hover or focus for tooltip: &nbsp;
+    <Tooltip {...args}>
+      <Icon color="gray.500" name="question-outline" />
+    </Tooltip>
+  </Text>
+)
+Standard.args = {
+  ...props,
+}
+export const TextAnchor = (args: ITooltip): JSX.Element => (
+  <Text>
+    Hover or focus for tooltip: &nbsp;
+    <Tooltip {...args}>Text Anchor</Tooltip>
+  </Text>
+)
+TextAnchor.args = {
+  ...props,
+}
