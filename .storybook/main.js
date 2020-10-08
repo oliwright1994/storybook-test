@@ -1,11 +1,12 @@
 const path = require('path');
 
 module.exports = {
-  stories: ['../src/**/*.stories.tsx'],
+  stories: ['../Docs/**/*.stories.mdx', '../src/**/*.stories.tsx'],
   addons: [
     '@storybook/addon-actions',
     '@storybook/addon-links',
     '@storybook/addon-a11y/register',
+    '@storybook/addon-docs/preset',
     '@storybook/addon-essentials',
   ],
   webpackFinal: async config => {

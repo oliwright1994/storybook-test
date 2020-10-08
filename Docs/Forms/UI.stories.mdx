@@ -1,0 +1,14 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import {Input } from '@bright/components'
+
+<Meta title="Design System/Forms/UI" component={Input}/>
+
+<Canvas>
+  <Story name="A simple checkbox">
+    <form>
+      <Checkbox id="Unchecked" label="Unchecked" />
+      <Checkbox id="Checked" label="Checked" checked />
+      <Checkbox appearance="secondary" id="second" label="Secondary" checked />
+    </form>
+  </Story>
+</Canvas>
