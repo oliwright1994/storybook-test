@@ -21,7 +21,6 @@
     "@babel/preset-typescript": "^7.10.1",
     "@rollup/plugin-commonjs": "^11.1.0",
     "@rollup/plugin-node-resolve": "^8.1.0",
-    "@smartpension/eslint-config": "^0.2.0",
     "@storybook/addon-a11y": "^6.0.22",
     "@storybook/addon-actions": "^6.0.22",
     "@storybook/addon-essentials": "^6.0.22",

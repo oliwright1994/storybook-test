@@ -23,7 +23,7 @@
     "typeRoots": ["./declarations"],
     "types": ["jest", "node"],
   },
-  "include": ["src", "declarations", "testing"],
+  "include": ["src", "declarations"],
   "exclude": [
     "node_modules",
     "dist",
