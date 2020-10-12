@@ -3,7 +3,7 @@ import React from 'react'
 
 import Select, { SelectProps } from './Select'
 
-export default { component: Select, title: 'Select' } as Meta
+export default { component: Select, title: 'Components/Select' } as Meta
 export const Standard = (args: SelectProps): JSX.Element => (
   <Select {...args}>
     <option value="first">First value</option>

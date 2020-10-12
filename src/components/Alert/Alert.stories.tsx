@@ -4,7 +4,7 @@ import React from 'react'
 
 import Alert, { IAlert } from './Alert'
 
-export default { component: Alert, title: 'Alert' } as Meta
+export default { component: Alert, title: 'Components/Alert' } as Meta
 export const Standard = (args: IAlert): JSX.Element => (
   <Alert {...args}>
     <Text>This is a Text component inside an Alert component</Text>

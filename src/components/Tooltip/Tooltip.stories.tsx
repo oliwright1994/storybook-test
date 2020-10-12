@@ -5,7 +5,7 @@ import React from 'react'
 
 import Tooltip, { ITooltip } from './Tooltip'
 
-export default { component: Tooltip, title: 'Tooltip' } as Meta
+export default { component: Tooltip, title: 'Components/Tooltip' } as Meta
 const props = {
   label: 'This is the tooltip text',
   areaLabel: 'This is the aria-label',

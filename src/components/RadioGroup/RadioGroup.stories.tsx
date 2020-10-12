@@ -3,7 +3,7 @@ import React from 'react'
 
 import RadioGroup, { IRadioGroupProps } from './RadioGroup'
 
-export default { component: RadioGroup, title: 'RadioGroup' } as Meta
+export default { component: RadioGroup, title: 'Components/RadioGroup' } as Meta
 export const Standard = (args: IRadioGroupProps): JSX.Element => (
   <RadioGroup {...args}>
     <RadioGroup.Radio id="1" value="1">

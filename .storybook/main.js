@@ -5,7 +5,7 @@ module.exports = {
   addons: [
     '@storybook/addon-actions',
     '@storybook/addon-links',
-    '@storybook/addon-a11y/register',
+    '@storybook/addon-a11y',
     '@storybook/addon-docs/preset',
     '@storybook/addon-essentials',
     'storybook-addon-designs'
@@ -24,7 +24,6 @@ module.exports = {
         },
       ],
     });
-    config.resolve.extensions.push('.ts', '.tsx');
     return config;
   },
 };

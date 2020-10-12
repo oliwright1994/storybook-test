@@ -1,13 +1,7 @@
-import { addDecorator } from '@storybook/react'
-import { withA11y } from '@storybook/addon-a11y'
-import withThemeProvider from '../src/storybook/withStorybookProviders/withStorybookProviders'
 import { create } from '@storybook/theming/create';
+import { addons } from '@storybook/addons';
 
-
-addDecorator(withThemeProvider())
-addDecorator(withA11y)
-
-const myTheme = create({
+export const yourTheme = create({
   base: 'light',
 
   colorPrimary: '#003357',
@@ -28,7 +22,7 @@ const myTheme = create({
   textInverseColor: 'rgba(255,255,255,0.9)',
 
   // Toolbar default and active colors
-  barTextColor: '#666666',
+  barTextColor: '#7BE0C2',
   barSelectedColor: 'white',
   barBg: '#003357',
 
@@ -43,8 +37,7 @@ const myTheme = create({
   brandImage: 'https://assets-global.website-files.com/5ce68aba5375cabb8f952335/5cf14689e9439532a8caaa6e_Smart-Logo-Positive%403x.png',
 });
 
-export const parameters = {
-  docs: {
-    theme: myTheme,
-  }
-}
+
+addons.setConfig({
+  theme: yourTheme,
+});

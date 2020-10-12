@@ -9,7 +9,7 @@ import Table from '.'
 
 const CANCEL_ACTION = 'Cancel transaction'
 
-export default { component: Table, title: 'Table' } as Meta
+export default { component: Table, title: 'Components/Table' } as Meta
 export const inboxExample = (): JSX.Element => (
   <Table
     columns={[
