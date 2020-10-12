@@ -10,7 +10,7 @@ export default { component: Input, title: 'Components/Input', decorators: [withD
   componentSubtitle: 'Used to collect information from the used',
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/s1QI9G4WvO7Lm5bXuNviOv/DS_UX_Forms_0.3?node-id=5%3A0',
+    url: 'https://www.figma.com/file/p9KNWMib8ueXkYnCmMLwsZ/DS-V1.2-Smart?node-id=1%3A12231',
   },
 }, } as Meta
 export const Standard = (args: IInput): JSX.Element => (
