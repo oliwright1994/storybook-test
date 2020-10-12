@@ -4,7 +4,7 @@ import React from 'react'
 
 import Heading from './Heading'
 
-export default { component: Heading, title: 'Heading' } as Meta
+export default { component: Heading, title: 'Components/Heading' } as Meta
 export const Standard = (): JSX.Element => (
   <Stack>
     <Heading as="h1">H1 Heading</Heading>

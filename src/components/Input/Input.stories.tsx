@@ -6,7 +6,7 @@ import React from 'react'
 
 import Input, { IInput } from './Input'
 
-export default { component: Input, title: 'Input', decorators: [withDesign], parameters: {
+export default { component: Input, title: 'Components/Input', decorators: [withDesign], parameters: {
   componentSubtitle: 'Used to collect information from the used',
   design: {
     type: 'figma',

@@ -3,7 +3,7 @@ import React from 'react'
 
 import Breadcrumb from './Breadcrumb'
 
-export default { component: Breadcrumb, title: 'Breadcrumb' } as Meta
+export default { component: Breadcrumb, title: 'Components/Breadcrumb' } as Meta
 export const Standard = (): JSX.Element => (
   <Breadcrumb>
     <Breadcrumb.Item href="/">Home</Breadcrumb.Item>

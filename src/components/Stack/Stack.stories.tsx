@@ -4,7 +4,7 @@ import React from 'react'
 
 import Stack, { IStack } from './Stack'
 
-export default { component: Stack, title: 'Stack' } as Meta
+export default { component: Stack, title: 'Components/Stack' } as Meta
 export const Standard = (args: IStack): JSX.Element => (
   <Stack {...args}>
     <Text>Test one</Text>

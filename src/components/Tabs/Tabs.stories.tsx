@@ -3,7 +3,7 @@ import React from 'react'
 
 import Tabs from '.'
 
-export default { component: Tabs, title: 'Tabs' } as Meta
+export default { component: Tabs, title: 'Components/Tabs' } as Meta
 export const Standard = (): JSX.Element => (
   <Tabs>
     <Tabs.TabList>
