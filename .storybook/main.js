@@ -8,7 +8,8 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-docs/preset',
     '@storybook/addon-essentials',
-    'storybook-addon-designs'
+    'storybook-addon-designs',
+    './test-addon/register.js'
   ],
   webpackFinal: async config => {
     config.resolve.alias['@bright'] = path.resolve(__dirname, '../src/');

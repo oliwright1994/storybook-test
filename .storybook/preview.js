@@ -52,5 +52,5 @@ export const options = {
 export const parameters = {
   docs: {
     theme: myTheme,
-  }
+  },
 }
