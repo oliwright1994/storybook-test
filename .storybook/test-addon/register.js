@@ -2,13 +2,13 @@ import React from 'react';
 import { addons, types } from '@storybook/addons';
 import { Button, Icons } from '@storybook/components';
 import { useParameter } from '@storybook/api'
-const ADDON_ID = 'testaddon';
-const PANEL_ID = `${ADDON_ID}/panel`;
+
+const ADDON_ID = 'queryparamaddon';
+const TOOL_ID = `${ADDON_ID}/tool`;
 
 const copyQueryParamLink = (api) => {
 
   const story = api.getCurrentStoryData()
-
   let touchedArgs = {}
 
   for (const arg in story.args) {
@@ -18,9 +18,8 @@ const copyQueryParamLink = (api) => {
   }
 
   const queryString = new URLSearchParams({ path: api.getUrlState().path, ...touchedArgs, }).toString();
-
-
   const componentUrl = new URL(window.location.host)
+
   componentUrl.search = queryString
 
   navigator.permissions.query({ name: "clipboard-write" }).then(result => {
@@ -31,11 +30,11 @@ const copyQueryParamLink = (api) => {
 }
 
 addons.register(ADDON_ID, (api) => {
-  addons.add(PANEL_ID, {
+  addons.add(TOOL_ID, {
     type: types.TOOL,
     title: 'viewport / Copy Link',
     match: ({ viewMode }) => viewMode === 'story',
-    render: ({ active, key }) => (
+    render: () => (
       <Button onClick={() => copyQueryParamLink(api)}>
         <Icons icon='link' color={api.getInitialOptions().theme.barTextColor} />
       </Button>
