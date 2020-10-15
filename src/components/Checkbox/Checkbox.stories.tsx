@@ -3,7 +3,9 @@ import React from 'react'
 
 import Checkbox, { ICheckbox } from './Checkbox'
 
-export default { component: Checkbox, title: 'Components/Checkbox' } as Meta
+export default { component: Checkbox, title: 'Components/Checkbox', doc: {
+  page: './Checkbox.mdx'
+} } as Meta
 export const Standard = (args: ICheckbox): JSX.Element => <Checkbox {...args} />
 Standard.args = {
   label: 'Annual Management Charge',

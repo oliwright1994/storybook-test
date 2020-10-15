@@ -11,6 +11,9 @@ module.exports = {
     'storybook-addon-designs',
     './test-addon/register.js'
   ],
+  typescript: {
+    reactDocgen: 'react-docgen',
+  },
   webpackFinal: async config => {
     config.resolve.alias['@bright'] = path.resolve(__dirname, '../src/');
     config.resolve.alias.testing = path.resolve(__dirname, '../testing/');

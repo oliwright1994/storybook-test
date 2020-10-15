@@ -33,7 +33,7 @@ export const yourTheme = create({
   inputBorderRadius: 4,
 
   brandTitle: 'Bright',
-  brandUrl: 'https://example.com',
+  brandUrl: 'https://www.smart.co/',
   brandImage: 'https://assets-global.website-files.com/5ce68aba5375cabb8f952335/5cf14689e9439532a8caaa6e_Smart-Logo-Positive%403x.png',
 });
 

@@ -38,19 +38,15 @@ const myTheme = create({
   inputTextColor: '#222222',
   inputBorderRadius: 4,
 
-  brandTitle: 'Bright',
-  brandUrl: 'https://example.com',
-  brandImage: 'https://assets-global.website-files.com/5ce68aba5375cabb8f952335/5cf14689e9439532a8caaa6e_Smart-Logo-Positive%403x.png',
 });
-
-export const options = {
-  storySort: {
-    order: ['Design System', ['Introduction', 'Foundations', 'Status', 'Write Smart', ['How we write for Smart', 'Grammer and formatting', 'Voice and Tone', 'Vocabulary', 'Quick tips']], 'Components'],
-  },
-};
 
 export const parameters = {
   docs: {
     theme: myTheme,
   },
+  options: {
+    storySort: {
+      order: ['Design System', ['Introduction', 'Foundations', 'Status', 'Write Smart', 'Component Example', ['How we write for Smart', 'Grammer and formatting', 'Voice and Tone', 'Vocabulary', 'Quick tips']], 'Components'],
+    },
+  }
 }

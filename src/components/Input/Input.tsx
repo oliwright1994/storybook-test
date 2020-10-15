@@ -56,5 +56,8 @@ const Input: FC<IInput> = ({
     </FormControl>
   )
 }
-
+Input.defaultProps = {
+  label: 'Passport Number',
+  description: 'As it appears on you passport'
+}
 export default Input

@@ -6,7 +6,7 @@ interface IHeading {
 }
 
 const Heading: FC<IHeading> = ({ children, as = 'h1' }) => {
-  return <ChakraHeading as={as}>{children}</ChakraHeading>
+  return <ChakraHeading as={as} py={4}>{children}</ChakraHeading>
 }
 
 export default Heading
