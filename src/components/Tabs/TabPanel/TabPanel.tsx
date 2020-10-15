@@ -2,7 +2,13 @@ import { TabPanel as ChakraTabPanel, TabPanelProps as IChakraTabPanel } from '@c
 import React, { FC } from 'react'
 
 const TabPanel: FC<IChakraTabPanel> = ({ children, isSelected }) => {
-  return <ChakraTabPanel isSelected={isSelected} pt={4}>{children}</ChakraTabPanel>
+  return (
+    <ChakraTabPanel mt={2} px={4} isSelected={isSelected} pt={4}
+    // overflowY="scroll" height="100%"
+    >
+      {children}
+    </ChakraTabPanel>
+  )
 }
 
 export default TabPanel

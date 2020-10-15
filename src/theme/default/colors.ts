@@ -64,7 +64,7 @@ const red = {
   200: '#feb2b2',
   300: '#fc8181',
   400: '#f56565',
-  500: '#e53e3e',
+  500: '#BC074C',
   600: '#c53030',
   700: '#9b2c2c',
   800: '#822727',
@@ -101,7 +101,7 @@ const green = {
   200: '#9ae6b4',
   300: '#68d391',
   400: '#48bb78',
-  500: '#38a169',
+  500: '#3B8524',
   600: '#2f855a',
   700: '#276749',
   800: '#22543d',
@@ -168,6 +168,14 @@ const pink = {
   900: '#521B41',
 }
 
+const primary = {
+  500: "#003357"
+}
+
+const secondary = {
+  500: "#7BE0C2"
+}
+
 export default {
   transparent: 'transparent',
   current: 'currentColor',
@@ -185,6 +193,8 @@ export default {
   blue,
   purple,
   pink,
+  primary,
+  secondary,
   background: [light[100], light[400], light[700]],
   foreground: [dark[100], dark[400], dark[700]],
   success: [green[100], green[400], green[700]],

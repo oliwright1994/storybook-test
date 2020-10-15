@@ -14,7 +14,7 @@ interface ITabs extends FC<IChakraTabs> {
 }
 
 const Tabs: ITabs = ({ children }) => {
-  return <ChakraTabs>{children}</ChakraTabs>
+  return <ChakraTabs  flexGrow={1}>{children}</ChakraTabs>
 }
 
 Tabs.Tab = Tab

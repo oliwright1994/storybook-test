@@ -46,7 +46,7 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['Design System', ['Introduction', 'Foundations', 'Status', 'Write Smart', 'Component Example', ['How we write for Smart', 'Grammer and formatting', 'Voice and Tone', 'Vocabulary', 'Quick tips']], 'Components'],
+      order: ['Design System', ['Start Smart', 'Foundations', 'Status', 'Write Smart',], 'Components'],
     },
   }
 }

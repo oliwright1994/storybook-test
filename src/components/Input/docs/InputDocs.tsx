@@ -18,12 +18,13 @@ const InputDocs: FC = () => {
   return (
     <BrightProvider theme={defaultTheme}>
       <Flex px={20} direction='column' >
-      <Heading as='h2'>Input Fields</Heading>
+      <Heading as='h1'>Input Fields</Heading>
       <Tabs>
         <Tabs.TabList>
           <Tabs.Tab>UX</Tabs.Tab>
           <Tabs.Tab>UI</Tabs.Tab>
           <Tabs.Tab>Research</Tabs.Tab>
+          <Tabs.Tab>Code</Tabs.Tab>
         </Tabs.TabList>
         <Tabs.TabPanels>
           <Tabs.TabPanel>
@@ -34,6 +35,9 @@ const InputDocs: FC = () => {
           </Tabs.TabPanel>
           <Tabs.TabPanel>
             <Research />
+          </Tabs.TabPanel>
+          <Tabs.TabPanel>
+            <Heading>Code content</Heading>
           </Tabs.TabPanel>
         </Tabs.TabPanels>
       </Tabs>
