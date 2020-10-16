@@ -5,13 +5,12 @@ import { STag } from './Tag.styled'
 
 const Tag: FC<ITag> = ({ children, messageType, ...props }) => (
   <STag
-    color={`${messageType}.2`}
-    border="2px"
-    borderColor={`${messageType}.2`}
-    backgroundColor={`${messageType}.0`}
-    borderRadius="lg"
+    color='white'
+    backgroundColor={`${messageType}.2`}
     px={2}
     py={1}
+    mx={2}
+    borderRadius="md"
     fontSize="xs"
     fontWeight={4}
     {...props}

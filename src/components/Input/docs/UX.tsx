@@ -41,15 +41,33 @@ const UI: FC = () => {
     <Box>
       <Heading as="h2">Basic input field structure</Heading>
       <Canvas>
+        <Flex justifyContent="space-around">
         <Input
-          id="hm"
+          id="forename"
+          isRequired
+          onChange={() => null}
+          label="Forename"
+          description="As shown in your passport"
+          placeholder="e.g. John"
+        />
+        <Input
+          id="middle_name"
+          onChange={() => null}
+          label="Middle name "
+          description="As shown in your passport"
+          placeholder="e.g. Andrew"
+        />
+        <Input
+          id="surname"
+          isRequired
           onChange={() => null}
           label="Surname"
           description="As shown in your passport"
           isInvalid
-          placeholder="e.g. AH53DE3458NF"
+          placeholder="e.g. Smith"
           errorMessage="Enter your surname"
-        ></Input>
+        />
+        </Flex>
       </Canvas>
       <Heading as="h3">
         Overview

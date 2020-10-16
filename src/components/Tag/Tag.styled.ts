@@ -10,9 +10,11 @@ import {
   FontWeightProps,
   padding,
   PaddingProps,
+  margin,
+  MarginProps
 } from 'styled-system'
 
-type TSTag = ColorProps & BorderProps & PaddingProps & FontSizeProps & FontWeightProps
+type TSTag = ColorProps & BorderProps & PaddingProps & FontSizeProps & FontWeightProps & MarginProps
 
 export const STag = styled.div<TSTag>`
   display: inline-block;
@@ -21,4 +23,5 @@ export const STag = styled.div<TSTag>`
   ${color}
   ${border}
   ${fontWeight}
+  ${margin}
 `

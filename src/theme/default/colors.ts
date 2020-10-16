@@ -197,7 +197,7 @@ export default {
   secondary,
   background: [light[100], light[400], light[700]],
   foreground: [dark[100], dark[400], dark[700]],
-  success: [green[100], green[400], green[700]],
+  success: [green[100], green[500], green[700]],
   warning: [yellow[100], yellow[400], yellow[700]],
   danger: [red[100], red[400], red[700]],
   info: [blue[100], blue[400], blue[700]],

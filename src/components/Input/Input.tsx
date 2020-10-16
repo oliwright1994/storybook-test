@@ -1,4 +1,5 @@
 import Stack from '@bright/components/Stack'
+import {Text} from '@bright/components'
 import { Space } from '@bright/constants'
 import {
   FormControl,
@@ -35,11 +36,12 @@ const Input: FC<IInput> = ({
   ...props
 }) => {
   return (
-    <FormControl isInvalid={isInvalid} isRequired={isRequired}>
+    <FormControl isInvalid={isInvalid} >
       <Stack space={Space.xxs}>
         {label && (
           <FormLabel htmlFor={id} padding={0} verticalAlign="baseline">
             {label}
+            {!isRequired && <Text as='strong'>(Optional)</Text>}
           </FormLabel>
         )}
         {description && <FormHelperText margin={0}>{description}</FormHelperText>}
