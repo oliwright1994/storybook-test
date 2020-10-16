@@ -4,7 +4,7 @@ import { Heading, Text, Input, Tabs, Tag, Link } from '@bright/components'
 import { Flex, Icon } from '@chakra-ui/core'
 import React, { FC, FormEvent } from 'react'
 import BrightProvider from '@bright/providers/BrightProvider'
-import defaultTheme from '@bright/theme/default'
+import { defaultBrightTheme }  from '@bright/theme'
 import UI from './UI'
 import UX from './UX'
 import Research from './Research'
@@ -12,7 +12,7 @@ import { MessageType } from '@bright/constants'
 
 const InputDocs: FC = () => {
   return (
-    <BrightProvider theme={defaultTheme}>
+    <BrightProvider theme={defaultBrightTheme}>
       <Flex px={20} direction="column">
         <Heading as="h1">Input Fields</Heading>
         <Flex mb={5}>

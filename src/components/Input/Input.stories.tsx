@@ -13,7 +13,7 @@ export default { component: Input, title: 'Components/Input', decorators: [withD
   },
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/p9KNWMib8ueXkYnCmMLwsZ/DS-V1.2-Smart?node-id=1%3A12231',
+    url: 'https://www.figma.com/file/p9KNWMib8ueXkYnCmMLwsZ/DS-V1.2-Smart?node-id=2%3A13152',
   },
 }, } as Meta
 

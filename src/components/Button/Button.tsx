@@ -24,7 +24,7 @@ const Button: FC<IButton> = ({
 }) => (
   <ChakraButton
     onClick={onClick}
-    variantColor={variantMap[variant || 'primary']}
+    variantColor={ 'primary'}
     size={size}
     isDisabled={isDisabled}
     leftIcon={leftIcon}
